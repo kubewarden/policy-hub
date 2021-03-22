@@ -120,7 +120,7 @@ class Hub extends React.Component {
         </header>
         <section>
           <div><input name="filter-abstract" key="filter-abstract" onChange={(e) => this.onAbstractFilterChange(e)} placeholder="Filter by abstract" /></div>
-          {this.filter().map(e => <PolicyItem policy={e} /> )}
+          {this.filter().map(e => <PolicyItem policy={e} key={e.name} /> )}
         </section>
       </div>
     );

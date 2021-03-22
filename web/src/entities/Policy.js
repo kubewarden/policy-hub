@@ -42,7 +42,7 @@ const PolicyItem = (props: Props) => {
       </div>
       <div className="policy-item-field">
         <label>resources:</label>
-        {props.policy.resources.map(r => <span>{r}</span>)}
+        {props.policy.resources.map(r => <span key={props.policy.name + "-" + r}>{r}</span>)}
       </div>
       <div className="policy-item-field">
         <label>mutation:</label>
@@ -50,7 +50,7 @@ const PolicyItem = (props: Props) => {
       </div>
       <div className="policy-item-field">
         <label>tags:</label>
-        {props.policy.tags.map(t => <p className="tag">{t}</p>)}
+        {props.policy.tags.map(t => <p className="tag" key={props.policy.name + "-" + t}>{t}</p>)}
       </div>
     </div>
   );
