@@ -8,25 +8,39 @@
 }
 
 .link {
-  color: #00a2ff;
+  color: #008cff;
 }
 
 .policy-item {
   text-align: left;
   display: inline-block;
-  padding: 2em;
+  padding: 1em 2em;
   border: 1px solid #aaa;
   margin: 1em;
   width: 25%;
   vertical-align: top;
 }
 
-.policy-item h3 {
+.policy-item .title {
+  padding: 0em .5em .5em .5em;
   text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
 }
 
-.policy-item > label {
+.policy-item > .policy-item-field > label {
   font-size: .9em;
   margin-right: .5em;
   color: #666;
+}
+
+.policy-item > .policy-item-field .tag {
+  display: inline-block;
+  padding: 0 .3em;
+  margin: 0 .1em;
+  background-color: #FFECB5;
+  border: 1px solid #FFC107;
+  font-size: .9em;
 }
