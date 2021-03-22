@@ -106,8 +106,7 @@ class Hub extends React.Component {
   }
 
   filter() {
-    console.log(this.state.abstractCriteria);
-    return _FAKE_DATASET;
+    return _FAKE_DATASET.filter(p => p.abstract.includes(this.state.abstractCriteria));
   }
 
   render() {
