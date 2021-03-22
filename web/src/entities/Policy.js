@@ -28,18 +28,37 @@ const PolicyItem = (props: Props) => {
       <div className="title">{props.policy.name}</div>
       <div className="policy-item-field">
         <label>abstract:</label>
-        <Highlight text={props.policy.abstract} highlight={props.abstractCriteria} />
+        <Highlight
+          text={props.policy.abstract}
+          highlight={props.abstractCriteria}
+        />
       </div>
       <div className="policy-item-field">
-        <label>source:</label><span>
-        <a className="link" href={props.policy.source} target="_blank" rel="noopener noreferrer">{props.policy.source}</a></span>
+        <label>source:</label>
+        <span>
+          <a className="link"
+            href={props.policy.source}
+            target="_blank"
+            rel="noopener noreferrer">
+              {props.policy.source}
+          </a>
+        </span>
       </div>
       <div className="policy-item-field">
         <label>registry:</label>
         {
+          props.policy.download.registry ?
+            <code>{props.policy.download.registry}</code>
+            : null
+        }
+        {
           props.policy.download.url ?
-            <span><a className="link" href={props.policy.download.url} target="_blank" rel="noopener noreferrer">{props.policy.download.registry}</a></span>
-          : <span>registry not available</span>
+            <a className="link small"
+              href={props.policy.download.url}
+              target="_blank" rel="noopener noreferrer">
+                download
+            </a>
+          : null
         }
       </div>
       <div className="policy-item-field">

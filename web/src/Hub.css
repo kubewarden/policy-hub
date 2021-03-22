@@ -1,24 +1,32 @@
 .Hub {
-  text-align: center;
+  text-align: left;
 }
 
 .Hub-header {
   padding: 1em;
   font-size: 2em;
+  text-align: center;
 }
 
 .link {
   color: #008cff;
 }
 
+.filter-box {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1em;
+}
+
 .policy-item {
   text-align: left;
   display: inline-block;
-  padding: 1em 2em;
+  padding: .5em 1em;
   border: 1px solid #aaa;
   margin: 1em;
   width: 25%;
   vertical-align: top;
+  overflow: auto;
 }
 
 .policy-item .title {
@@ -30,19 +38,36 @@
   border-bottom: 1px solid #ccc;
 }
 
-.policy-item > .policy-item-field > label {
+.policy-item .policy-item-field {
+  margin-top: .2em;
+  padding: .5em 1em;
+}
+
+.policy-item .policy-item-field label {
   font-size: .9em;
   margin-right: .5em;
   color: #666;
 }
 
-.policy-item > .policy-item-field .tag {
+.policy-item .policy-item-field .tag {
   display: inline-block;
   padding: 0 .3em;
   margin: 0 .1em;
   background-color: #FFECB5;
   border: 1px solid #FFC107;
   font-size: .9em;
+}
+
+code {
+  background-color: #eee;
+  font-size: .9em;
+  padding: 0 .2em;
+  display: inline;
+}
+
+.link.small {
+  font-size: .8em;
+  margin-left: .2em;
 }
 
 .policy-item mark {
