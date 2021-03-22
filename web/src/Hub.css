@@ -33,7 +33,7 @@
   padding: .5em 1em;
   border: 1px solid #aaa;
   margin: 1em;
-  width: 25%;
+  width: 45%;
   vertical-align: top;
   overflow: auto;
 }
@@ -47,17 +47,29 @@
   border-bottom: 1px solid #ccc;
 }
 
-.policy-item .policy-item-field {
+/*DL, DT, DD TAGS LIST DATA*/
+
+dl dt {
+  display: inline-block;
+  width:80px;
+}
+
+dl dd {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.policy-item dl {
   padding: .2em 1em;
 }
 
-.policy-item .policy-item-field label {
+.policy-item dl dt {
   font-size: .9em;
   margin-right: .5em;
   color: #666;
 }
 
-.policy-item .policy-item-field .tag {
+.policy-item dl dd .tag {
   display: inline-block;
   padding: 0 .3em;
   margin: 0 .1em;
@@ -74,10 +86,10 @@ code {
   vertical-align: middle;
 }
 
-.policy-item-field .link {
+dd .link {
   font-size: 1em;
 }
 
-.policy-item mark {
+dd mark {
   background-color: #99ff77;
 }
