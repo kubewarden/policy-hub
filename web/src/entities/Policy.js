@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Highlight } from './Highlight';
 
 type Download = {
   registry: String,
@@ -17,6 +18,7 @@ export type Policy = {
 
 type Props = {
   Policy: Policy,
+  abstractCriteria: String,
 };
 
 
@@ -26,7 +28,7 @@ const PolicyItem = (props: Props) => {
       <div className="title">{props.policy.name}</div>
       <div className="policy-item-field">
         <label>abstract:</label>
-        <span>{props.policy.abstract}</span>
+        <Highlight text={props.policy.abstract} highlight={props.abstractCriteria} />
       </div>
       <div className="policy-item-field">
         <label>source:</label><span>

@@ -44,3 +44,7 @@
   border: 1px solid #FFC107;
   font-size: .9em;
 }
+
+.policy-item mark {
+  background-color: #99ff77;
+}
