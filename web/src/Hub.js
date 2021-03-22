@@ -94,21 +94,37 @@ const _FAKE_DATASET: Array<Policy> = [
 ];
 
 
-export default function Hub() {
-  const filter = () => {
+class Hub extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { abstractCriteria: "" };
+  }
+
+  onAbstractFilterChange(e) {
+    const criteria = e.target.value;
+    this.setState({ abstractCriteria: criteria });
+  }
+
+  filter() {
+    console.log(this.state.abstractCriteria);
     return _FAKE_DATASET;
   }
 
-  return (
-    <div className="Hub">
-      <header className="Hub-header">
-        <a className="link" href="/policy-hub" target="_blank" rel="noopener noreferrer">
-          Policy Hub
-        </a>
-      </header>
-      <section>
-        {filter().map(e => <PolicyItem policy={e} /> )}
-      </section>
-    </div>
-  );
+  render() {
+    return (
+      <div className="Hub">
+        <header className="Hub-header">
+          <a className="link" href="/policy-hub" target="_blank" rel="noopener noreferrer">
+            Policy Hub
+          </a>
+        </header>
+        <section>
+          <div><input name="filter-abstract" key="filter-abstract" onChange={(e) => this.onAbstractFilterChange(e)} placeholder="Filter by abstract" /></div>
+          {this.filter().map(e => <PolicyItem policy={e} /> )}
+        </section>
+      </div>
+    );
+  }
 }
+
+export default Hub;
