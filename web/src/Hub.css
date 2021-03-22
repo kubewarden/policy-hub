@@ -10,6 +10,15 @@
 
 .link {
   color: #008cff;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link svg {
+  vertical-align: middle;
+  margin: 0 .1em;
+  font-size: inherit;
 }
 
 .filter-box {
@@ -39,8 +48,7 @@
 }
 
 .policy-item .policy-item-field {
-  margin-top: .2em;
-  padding: .5em 1em;
+  padding: .2em 1em;
 }
 
 .policy-item .policy-item-field label {
@@ -63,11 +71,11 @@ code {
   font-size: .9em;
   padding: 0 .2em;
   display: inline;
+  vertical-align: middle;
 }
 
-.link.small {
-  font-size: .8em;
-  margin-left: .2em;
+.policy-item-field .link {
+  font-size: 1em;
 }
 
 .policy-item mark {

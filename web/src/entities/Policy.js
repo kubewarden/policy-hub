@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { Highlight } from './Highlight';
+import LinkIcon from '@material-ui/icons/Link';
+import CodeIcon from '@material-ui/icons/Code';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 type Download = {
   registry: String,
@@ -34,15 +37,12 @@ const PolicyItem = (props: Props) => {
         />
       </div>
       <div className="policy-item-field">
-        <label>source:</label>
-        <span>
-          <a className="link"
-            href={props.policy.source}
-            target="_blank"
-            rel="noopener noreferrer">
-              {props.policy.source}
-          </a>
-        </span>
+        <a className="link"
+          href={props.policy.source}
+          target="_blank"
+          rel="noopener noreferrer">
+            <CodeIcon /> source
+        </a>
       </div>
       <div className="policy-item-field">
         <label>registry:</label>
@@ -53,10 +53,10 @@ const PolicyItem = (props: Props) => {
         }
         {
           props.policy.download.url ?
-            <a className="link small"
+            <a className="link download"
               href={props.policy.download.url}
               target="_blank" rel="noopener noreferrer">
-                download
+                <GetAppIcon />download
             </a>
           : null
         }
