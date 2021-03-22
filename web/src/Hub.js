@@ -102,7 +102,7 @@ export default function Hub() {
   return (
     <div className="Hub">
       <header className="Hub-header">
-        <a className="link" href="/" target="_blank" rel="noopener noreferrer">
+        <a className="link" href="/policy-hub" target="_blank" rel="noopener noreferrer">
           Policy Hub
         </a>
       </header>
