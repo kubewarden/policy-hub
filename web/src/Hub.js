@@ -26,23 +26,16 @@ class Hub extends React.Component {
     return (
       <div className="Hub">
         <header className="Hub-header">
-          <a className="link"
-            href="/policy-hub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Policy Hub
-          </a>
+          <a href="/policy-hub" rel="noopener noreferrer">Policy Hub</a>
+          <input
+            className="filter-box"
+            name="filter-description"
+            key="filter-description"
+            onChange={(e) => this.onDescriptionFilterChange(e)}
+            placeholder="Filter by description"
+          />
         </header>
         <section>
-          <div className="filter-box">
-            <input
-              name="filter-description"
-              key="filter-description"
-              onChange={(e) => this.onDescriptionFilterChange(e)}
-              placeholder="Filter by description"
-            />
-          </div>
           {
             this.filter()
               .map(e =>

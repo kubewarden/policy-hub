@@ -8,12 +8,12 @@ import PersonIcon from '@material-ui/icons/Person';
 
 type Author = {
   name: String,
-  homepage: String,
+  homepage?: String,
 }
 
 type Download = {
-  registry: String,
-  url: String,
+  registry?: String,
+  url?: String,
 }
 
 export type Policy = {
@@ -34,66 +34,78 @@ type Props = {
 
 
 const PolicyItem = (props: Props) => {
+  const policy = props.policy;
+
   return (
-    <div className="policy-item">
-      <div className="title">{props.policy.name}</div>
-      <a className="link homepage"
-          href={props.policy.homepage}
-          target="_blank"
-          rel="noopener noreferrer">
-            <HomeIcon />Homepage
-      </a>
-      <dl>
-        <dt></dt>
-        <dd>
+    <article>
+      <div className="name">{policy.name}</div>
+      <div className="content">
+        <aside>
+          <a className="text-light link"
+              href={policy.homepage}
+              target="_blank"
+              rel="noopener noreferrer">
+                <HomeIcon />Homepage
+          </a>
+          <br/>
+          <br/>
+          {
+            policy.author.homepage ?
+              <a className="text-light link"
+                  href={policy.author.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Author">
+                    <PersonIcon />{policy.author.name}
+              </a>
+              : <span className="text-smaller text-light not-a-real-link"><PersonIcon />{policy.author.name}</span>
+          }
+          <br/>
+          <br/>
+          <div className="text-light not-a-real-link mutation"
+              title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
+            <SpellcheckIcon />{policy.mutation ? <EditIcon /> : null}
+          </div>
+        </aside>
+
+        <div className="text-light text-bigger">
           <Highlight
-            text={props.policy.description}
+            text={policy.description}
             highlight={props.descriptionCriteria}
           />
-        </dd>
-        <br/>
-        <br/>
-        <dt>Author :</dt>
-        <dd>
-          <a className="link"
-            href={props.policy.author.homepage}
-            target="_blank"
-            rel="noopener noreferrer">
-              <PersonIcon />{props.policy.author.name}
-          </a>
-        </dd>
-        <br/>
-        <dt>Registry :</dt>
-        <dd>
+        </div>
+        <div className="download">
+          <div className="text-light text-smaller">Registry</div>
           {
-            props.policy.download.registry ?
-              <code>{props.policy.download.registry}</code>
+            policy.download.registry ?
+              <input type="text"
+                  className="text-smaller text-light"
+                  value={policy.download.registry}
+                  readonly />
               : null
           }
           {
-            props.policy.download.url ?
+            policy.download.url ?
               <a className="link download"
-                href={props.policy.download.url}
-                target="_blank" rel="noopener noreferrer">
+                href={policy.download.url}
+                target="_blank" rel="noopener noreferrer"
+                title="Download Policy">
                   <GetAppIcon />
               </a>
             : null
           }
-        </dd>
-        <br/>
-        <br/>
-        <dt>Resources :</dt>
-        <dd>
-          {props.policy.resources.map(r => <p className="resource" key={props.policy.name + "-" + r}>{r}</p>)}
-        </dd>
-        <br/>
-        <dt>Keywords :</dt>
-        <dd>
-          {props.policy.keywords.map(k => <p className="keyword" key={props.policy.name + "-" + k}>{k}</p>)}
-        </dd>
-      </dl>
-      <div className="mutation"><SpellcheckIcon />{props.policy.mutation ? <EditIcon /> : null}</div>
-    </div>
+        </div>
+        <div>
+          <div className="text-light text-smaller">Resources</div>
+          {policy.resources.map(r => <span className="badge resource text-smaller" key={policy.name + "-" + r}>{r}</span>)}
+        </div>
+        <div>
+          <div className="text-light text-smaller">Keywords</div>
+          {policy.keywords.map(k => <span className="badge keyword text-smaller" key={policy.name + "-" + k}>{k}</span>)}
+        </div>
+
+      </div>
+    </article>
   );
 };
 
