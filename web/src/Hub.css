@@ -9,13 +9,14 @@
 }
 
 .link {
-  color: #008cff;
+  color: #666;
   text-decoration: none;
 }
 .link:hover {
   text-decoration: underline;
 }
 .link svg {
+  color: #008cff;
   vertical-align: middle;
   margin: 0 .1em;
   font-size: inherit;
@@ -43,7 +44,7 @@
   text-align: center;
   font-size: 1.2em;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: .5em;
   border-bottom: 1px solid #ccc;
 }
 
@@ -69,6 +70,7 @@ dl dd {
   color: #666;
 }
 
+.policy-item dl dd .resource,
 .policy-item dl dd .keyword {
   display: inline-block;
   padding: 0 .3em;

@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Highlight } from './Highlight';
-import LinkIcon from '@material-ui/icons/Link';
-import CodeIcon from '@material-ui/icons/Code';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import HomeIcon from '@material-ui/icons/Home';
+import SpellcheckIcon from '@material-ui/icons/Spellcheck';
+import EditIcon from '@material-ui/icons/Edit';
+import PersonIcon from '@material-ui/icons/Person';
 
 type Author = {
   name: String,
@@ -35,8 +37,14 @@ const PolicyItem = (props: Props) => {
   return (
     <div className="policy-item">
       <div className="title">{props.policy.name}</div>
+      <a className="link homepage"
+          href={props.policy.homepage}
+          target="_blank"
+          rel="noopener noreferrer">
+            <HomeIcon />Homepage
+      </a>
       <dl>
-        <dt>description :</dt>
+        <dt></dt>
         <dd>
           <Highlight
             text={props.policy.description}
@@ -44,27 +52,18 @@ const PolicyItem = (props: Props) => {
           />
         </dd>
         <br/>
-        <dt>author :</dt>
+        <br/>
+        <dt>Author :</dt>
         <dd>
           <a className="link"
             href={props.policy.author.homepage}
             target="_blank"
             rel="noopener noreferrer">
-              <LinkIcon/> {props.policy.author.name}
+              <PersonIcon />{props.policy.author.name}
           </a>
         </dd>
         <br/>
-        <dt>homepage :</dt>
-        <dd>
-          <a className="link"
-            href={props.policy.homepage}
-            target="_blank"
-            rel="noopener noreferrer">
-              <CodeIcon /> homepage
-          </a>
-        </dd>
-        <br/>
-        <dt>registry :</dt>
+        <dt>Registry :</dt>
         <dd>
           {
             props.policy.download.registry ?
@@ -76,25 +75,24 @@ const PolicyItem = (props: Props) => {
               <a className="link download"
                 href={props.policy.download.url}
                 target="_blank" rel="noopener noreferrer">
-                  <GetAppIcon />download
+                  <GetAppIcon />
               </a>
             : null
           }
         </dd>
         <br/>
-        <dt>resources :</dt>
+        <br/>
+        <dt>Resources :</dt>
         <dd>
-          {props.policy.resources.map(r => <span key={props.policy.name + "-" + r}>{r}</span>)}
+          {props.policy.resources.map(r => <p className="resource" key={props.policy.name + "-" + r}>{r}</p>)}
         </dd>
         <br/>
-        <dt>mutation :</dt>
-        <dd>{props.policy.mutation ? "True" : "False"}</dd>
-        <br/>
-        <dt>keywords :</dt>
+        <dt>Keywords :</dt>
         <dd>
           {props.policy.keywords.map(k => <p className="keyword" key={props.policy.name + "-" + k}>{k}</p>)}
         </dd>
       </dl>
+      <div className="mutation"><SpellcheckIcon />{props.policy.mutation ? <EditIcon /> : null}</div>
     </div>
   );
 };
