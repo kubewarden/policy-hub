@@ -1,13 +1,17 @@
 [
   {
     "name": "psp-apparmor",
-    "abstract": "A Pod Security Policy that controls usage of AppArmor profiles",
-    "source": "https://github.com/chimera-kube/psp-apparmor",
+    "description": "A Pod Security Policy that controls usage of AppArmor profiles",
+    "homepage": "https://github.com/chimera-kube/psp-apparmor",
+    "author": {
+      "name": "Chimera Org",
+      "homepage": "https://github.com/chimera-kube"
+    },
     "download": {
       "registry": "ghcr.io/chimera-kube/policies/psp-apparmor:v0.1.1",
       "url": "https://github.com/chimera-kube/psp-apparmor/releases/download/v0.1.1/policy.wasm"
     },
-    "tags": [
+    "keywords": [
       "PSP",
       "AppArmor"
     ],
@@ -18,13 +22,17 @@
   },
   {
     "name": "psp-capabilities",
-    "abstract": "A Pod Security Policy that controls Container Capabilities",
-    "source": "https://github.com/chimera-kube/psp-capabilities",
+    "description": "A Pod Security Policy that controls Container Capabilities",
+    "homepage": "https://github.com/chimera-kube/psp-capabilities",
+    "author": {
+      "name": "Chimera Org",
+      "homepage": "https://github.com/chimera-kube"
+    },
     "download": {
       "registry": "ghcr.io/chimera-kube/policies/psp-capabilities:v0.1.0",
       "url": "https://github.com/chimera-kube/psp-capabilities/releases/download/v0.1.0/policy.wasm"
     },
-    "tags": [
+    "keywords": [
       "PSP",
       "Container",
       "Capabilities"
@@ -36,12 +44,16 @@
   },
   {
     "name": "trusted-repo-source",
-    "abstract": "Restrict what registries, tags and images can be used",
-    "source": "https://github.com/chimera-kube/trusted-repos-policy",
+    "description": "Restrict what registries, tags and images can be used",
+    "homepage": "https://github.com/chimera-kube/trusted-repos-policy",
+    "author": {
+      "name": "Chimera Org",
+      "homepage": "https://github.com/chimera-kube"
+    },
     "download": {
       "registry": "ghcr.io/chimera-kube/policies/trusted-repos:latest"
     },
-    "tags": [
+    "keywords": [
       "Image",
       "Registry",
       "Tag"
@@ -53,13 +65,17 @@
   },
   {
     "name": "psp-allow-privilege-escalation",
-    "abstract": "A Pod Security Policy that controls usage of `allowPrivilegeEscalation`",
-    "source": "https://github.com/chimera-kube/psp-allow-privilege-escalation",
+    "description": "A Pod Security Policy that controls usage of `allowPrivilegeEscalation`",
+    "homepage": "https://github.com/chimera-kube/psp-allow-privilege-escalation",
+    "author": {
+      "name": "Chimera Org",
+      "homepage": "https://github.com/chimera-kube"
+    },
     "download": {
       "registry": "ghcr.io/chimera-kube/policies/psp-allow-privilege-escalation:v0.1.1",
       "url": "https://github.com/chimera-kube/psp-allow-privilege-escalation/releases/download/v0.1.1/policy.wasm"
     },
-    "tags": [
+    "keywords": [
       "PSP",
       "Container",
       "Privilege Escalation"
@@ -71,13 +87,17 @@
   },
   {
     "name": "pod-privileged-policy",
-    "abstract": "Limit the ability to create privileged containers",
-    "source": "https://github.com/chimera-kube/pod-privileged-policy",
+    "description": "Limit the ability to create privileged containers",
+    "homepage": "https://github.com/chimera-kube/pod-privileged-policy",
+    "author": {
+      "name": "Chimera Org",
+      "homepage": "https://github.com/chimera-kube"
+    },
     "download": {
       "registry": "ghcr.io/chimera-kube/policies/pod-privileged-policy:v0.1.2",
       "url": "https://github.com/chimera-kube/pod-privileged-policy/releases/download/v0.1.2/policy.wasm"
     },
-    "tags": [
+    "keywords": [
       "PSP",
       "Container",
       "Privileged"

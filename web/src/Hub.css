@@ -69,7 +69,7 @@ dl dd {
   color: #666;
 }
 
-.policy-item dl dd .tag {
+.policy-item dl dd .keyword {
   display: inline-block;
   padding: 0 .3em;
   margin: 0 .1em;

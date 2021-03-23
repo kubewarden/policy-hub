@@ -6,19 +6,19 @@ class Hub extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      abstractCriteria: "",
+      descriptionCriteria: "",
       dataSet: require('./data/policy-hub.json'),
     };
   }
 
-  onAbstractFilterChange(e) {
+  onDescriptionFilterChange(e) {
     const criteria = e.target.value;
-    this.setState({ abstractCriteria: criteria });
+    this.setState({ descriptionCriteria: criteria });
   }
 
   filter() {
     return this.state.dataSet ? this.state.dataSet.filter(p =>
-      p.abstract.toLowerCase().includes(this.state.abstractCriteria.toLowerCase()))
+      p.description.toLowerCase().includes(this.state.descriptionCriteria.toLowerCase()))
       : [];
   }
 
@@ -37,17 +37,17 @@ class Hub extends React.Component {
         <section>
           <div className="filter-box">
             <input
-              name="filter-abstract"
-              key="filter-abstract"
-              onChange={(e) => this.onAbstractFilterChange(e)}
-              placeholder="Filter by abstract"
+              name="filter-description"
+              key="filter-description"
+              onChange={(e) => this.onDescriptionFilterChange(e)}
+              placeholder="Filter by description"
             />
           </div>
           {
             this.filter()
               .map(e =>
                 <PolicyItem policy={e} key={e.name}
-                  abstractCriteria={this.state.abstractCriteria}
+                  descriptionCriteria={this.state.descriptionCriteria}
                 />
               )
           }

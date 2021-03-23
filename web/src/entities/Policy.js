@@ -4,6 +4,11 @@ import LinkIcon from '@material-ui/icons/Link';
 import CodeIcon from '@material-ui/icons/Code';
 import GetAppIcon from '@material-ui/icons/GetApp';
 
+type Author = {
+  name: String,
+  homepage: String,
+}
+
 type Download = {
   registry: String,
   url: String,
@@ -11,17 +16,18 @@ type Download = {
 
 export type Policy = {
   name: String,
-  abstract: String,
-  source: String,
+  description: String,
+  homepage: String,
+  author: Author,
   download: Download,
-  tags: Array<String>,
+  keywords: Array<String>,
   resources: Array<String>,
   mutation: Boolean,
 }
 
 type Props = {
   Policy: Policy,
-  abstractCriteria: String,
+  descriptionCriteria: String,
 };
 
 
@@ -30,21 +36,31 @@ const PolicyItem = (props: Props) => {
     <div className="policy-item">
       <div className="title">{props.policy.name}</div>
       <dl>
-        <dt>abstract :</dt>
+        <dt>description :</dt>
         <dd>
           <Highlight
-            text={props.policy.abstract}
-            highlight={props.abstractCriteria}
+            text={props.policy.description}
+            highlight={props.descriptionCriteria}
           />
         </dd>
         <br/>
-        <dt>source :</dt>
+        <dt>author :</dt>
         <dd>
           <a className="link"
-            href={props.policy.source}
+            href={props.policy.author.homepage}
             target="_blank"
             rel="noopener noreferrer">
-              <CodeIcon /> source
+              <LinkIcon/> {props.policy.author.name}
+          </a>
+        </dd>
+        <br/>
+        <dt>homepage :</dt>
+        <dd>
+          <a className="link"
+            href={props.policy.homepage}
+            target="_blank"
+            rel="noopener noreferrer">
+              <CodeIcon /> homepage
           </a>
         </dd>
         <br/>
@@ -74,9 +90,9 @@ const PolicyItem = (props: Props) => {
         <dt>mutation :</dt>
         <dd>{props.policy.mutation ? "True" : "False"}</dd>
         <br/>
-        <dt>tags :</dt>
+        <dt>keywords :</dt>
         <dd>
-          {props.policy.tags.map(t => <p className="tag" key={props.policy.name + "-" + t}>{t}</p>)}
+          {props.policy.keywords.map(k => <p className="keyword" key={props.policy.name + "-" + k}>{k}</p>)}
         </dd>
       </dl>
     </div>
