@@ -1,10 +1,12 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Highlight } from './Highlight';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import HomeIcon from '@material-ui/icons/Home';
 import SpellcheckIcon from '@material-ui/icons/Spellcheck';
 import EditIcon from '@material-ui/icons/Edit';
 import PersonIcon from '@material-ui/icons/Person';
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 
 type Author = {
   name: String,
@@ -34,6 +36,14 @@ type Props = {
 
 
 const PolicyItem = (props: Props) => {
+  const [copied, setCopied] = useState(false);
+  const copyDone = () => {
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1000);
+  };
+
   const policy = props.policy;
 
   return (
@@ -41,24 +51,45 @@ const PolicyItem = (props: Props) => {
       <div className="name">{policy.name}</div>
       <div className="content">
         <aside>
-          <a className="text-light link"
+          <a className="text-light text-smaller link"
               href={policy.homepage}
               target="_blank"
               rel="noopener noreferrer">
                 <HomeIcon />Homepage
           </a>
           <br/>
-          <br/>
           {
             policy.author.homepage ?
-              <a className="text-light link"
+              <a className="text-light text-smaller link"
                   href={policy.author.homepage}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Author">
                     <PersonIcon />{policy.author.name}
               </a>
-              : <span className="text-smaller text-light not-a-real-link"><PersonIcon />{policy.author.name}</span>
+              : <span className="text-light text-smaller not-a-real-link"><PersonIcon />{policy.author.name}</span>
+          }
+          <br/>
+          <br/>
+          {
+            policy.download.registry ?
+              <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
+                <button className="text-smaller text-light button-link">
+                  <FileCopyIcon />Copy registry
+                  {copied ? <div className="inline-but-absolute-message">Copied!</div> : null}
+                </button>
+              </CopyToClipboard>
+            : null
+          }
+          <br/>
+          {
+            policy.download.url ?
+              <a className="text-smaller link download"
+                href={policy.download.url}
+                target="_blank" rel="noopener noreferrer">
+                  <GetAppIcon />Download Policy
+              </a>
+            : null
           }
           <br/>
           <br/>
@@ -74,27 +105,7 @@ const PolicyItem = (props: Props) => {
             highlight={props.descriptionCriteria}
           />
         </div>
-        <div className="download">
-          <div className="text-light text-smaller">Registry</div>
-          {
-            policy.download.registry ?
-              <input type="text"
-                  className="text-smaller text-light"
-                  value={policy.download.registry}
-                  readonly />
-              : null
-          }
-          {
-            policy.download.url ?
-              <a className="link download"
-                href={policy.download.url}
-                target="_blank" rel="noopener noreferrer"
-                title="Download Policy">
-                  <GetAppIcon />
-              </a>
-            : null
-          }
-        </div>
+        <br/>
         <div>
           <div className="text-light text-smaller">Resources</div>
           {policy.resources.map(r => <span className="badge resource text-smaller" key={policy.name + "-" + r}>{r}</span>)}
