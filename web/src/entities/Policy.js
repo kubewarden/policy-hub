@@ -72,17 +72,6 @@ const PolicyItem = (props: Props) => {
           <br/>
           <br/>
           {
-            policy.download.registry ?
-              <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
-                <button className="text-smaller button-link">
-                  <FileCopyIcon />Copy registry
-                  {copied ? <div className="inline-but-absolute-message">Copied!</div> : null}
-                </button>
-              </CopyToClipboard>
-            : null
-          }
-          <br/>
-          {
             policy.download.url ?
               <a className="text-smaller link download"
                 href={policy.download.url}
@@ -111,6 +100,15 @@ const PolicyItem = (props: Props) => {
             <div>
               <span className="text-light text-tiny text-label">REGISTRY&nbsp;</span>
               <code className="text-smaller">{policy.download.registry}</code>
+              <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
+                <button
+                    id="copy-registry"
+                    className="text-small button-link"
+                    title="Copy registry">
+                  <FileCopyIcon />
+                  {copied ? <div className="inline-but-absolute-message">Copied!</div> : null}
+                </button>
+              </CopyToClipboard>
             </div>
             : null
         }

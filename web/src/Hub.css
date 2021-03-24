@@ -84,6 +84,9 @@ article .content code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   background-color: #eee;
   padding: .2em .4em;
+  line-height: 1.5em;
+  border-radius: 2px;
+  border: 1px solid #ccc;
 }
 
 .text-light {
@@ -94,6 +97,9 @@ article .content code {
 }
 .text-smaller {
   font-size: .8em;
+}
+.text-small {
+  font-size: .9em;
 }
 .text-bigger {
   font-size: 1.1em;
@@ -139,7 +145,7 @@ article .content code {
 }
 
 .badge {
-  margin: 0 .2em;
+  margin-right: 4px;
   padding: 3px 6px;
   border-radius: 2px;
 }
@@ -169,11 +175,14 @@ mark {
 button {
   position: relative;
 }
+#copy-registry {
+  vertical-align: middle;
+}
 .inline-but-absolute-message {
   position: absolute;
   top: 0px;
   width: 50px;
-  left: -60px;
+  right: -60px;
   background-color: #0C322C;
   color: #fff;
   padding: .2em .4em;
