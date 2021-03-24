@@ -106,6 +106,15 @@ const PolicyItem = (props: Props) => {
           />
         </div>
         <br/>
+        {
+          policy.download.registry ?
+            <div>
+              <div className="text-light text-smaller">Registry</div>
+              <code className="text-smaller">{policy.download.registry}</code>
+            </div>
+            : null
+        }
+        <br/>
         <div>
           <div className="text-light text-smaller">Resources</div>
           {policy.resources.map(r => <span className="badge resource text-smaller" key={policy.name + "-" + r}>{r}</span>)}

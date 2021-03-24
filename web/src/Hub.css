@@ -62,13 +62,10 @@ aside {
 article .content > div {
   margin-bottom: .5em;
 }
-article .content .download input {
-  width: 85%;
+article .content code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   background-color: #eee;
   padding: .2em .4em;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 
 .text-light {
