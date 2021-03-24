@@ -37,13 +37,13 @@ header .keywords-select-container {
 }
 
 article {
-  background-color: #f7f7f7;
+  background-color: #fafafa;
   border: 1px solid #ccc;
   padding: .5em .5em 0 .5em;
   display: inline-block;
   border-radius: 5px;
-  margin: 5px;
-  width: 45%;
+  margin: 5px 10px;
+  width: 46%;
   vertical-align: top;
 }
 article:hover {
@@ -73,9 +73,12 @@ aside {
   padding: .5em .5em 0 .5em;
   border-left: 1px solid #ccc;
 }
+aside > * {
+  margin-top: 5px;
+}
 
 article .content > div {
-  margin-bottom: .5em;
+  margin-top: 10px;
 }
 article .content code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -115,7 +118,6 @@ article .content code {
 .button-link svg {
   font-size: inherit;
   vertical-align: inherit;
-  color: inherit;
   margin: 0 .2em;
 }
 .button-link {
