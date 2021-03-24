@@ -3,6 +3,9 @@ a {
   font-weight: 300;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 header {
   padding: 1em;
@@ -28,7 +31,7 @@ article {
   display: inline-block;
   border-radius: 5px;
   margin: 5px;
-  width: 22%;
+  width: 45%;
   vertical-align: top;
 }
 article:hover {
@@ -40,21 +43,21 @@ article:hover {
 article .name {
   text-align: center;
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0 1em .5em 1em;
   border-bottom: 1px solid #ccc;
 }
 article .content {
-  padding: .5em 28% .5em .5em;
+  padding: .5em 145px .5em .5em;
   position: relative;
-  min-height: 160px;
+  height: 200px;
 }
 aside {
   position: absolute;
   top: 0;
   bottom: .5em;
   right: 0;
-  width: 22%;
+  width: 120px;
   padding: .5em .5em 0 .5em;
   border-left: 1px solid #ccc;
 }
@@ -71,12 +74,21 @@ article .content code {
 .text-light {
   font-weight: 300;
 }
+.text-tiny {
+  font-size: .7em;
+}
 .text-smaller {
   font-size: .8em;
 }
 .text-bigger {
   font-size: 1.1em;
 }
+.text-label {
+  color: #666;
+  width: 70px;
+  display: inline-block;
+}
+
 .link,
 .button-link {
   vertical-align: sub;
@@ -100,6 +112,10 @@ article .content code {
   padding: 0;
   font-family: inherit;
 }
+.button-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .mutation {
   bottom: .5em;
@@ -111,11 +127,11 @@ article .content code {
 .badge {
   margin: 0 .2em;
   padding: 0 .5em;
-  border-radius: .5em;
+  border-radius: .3em;
 }
 .badge.resource {
-  background-color: #F5C2C7;
-  border: 1px solid #DC3545;
+  background-color: #E4F6EE;
+  border: 1px solid #30BA78;
 }
 .badge.keyword  {
   background-color: #FFECB5;
@@ -123,7 +139,7 @@ article .content code {
 }
 
 mark {
-  background-color: #30BA78;
+  background-color: #DC3545;
   color: #fff;
 }
 
