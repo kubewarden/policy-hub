@@ -22,7 +22,7 @@ header .filter-box {
   padding: .4em .5em;
 }
 
-header .keywords-select-container {
+header .resources-select-container {
   color: #333;
   min-width: 220px;
   display: inline-block;
@@ -173,10 +173,10 @@ button {
 
 
 /*** HACK ***/
-/* react-select - give the same style of the .badge.keyword */
+/* react-select - give the same style of the .badge.resources */
 .css-1rhbuit-multiValue {
-  background-color: #FFECB5!important;
-  border: 1px solid #FFC107!important;
+  background-color: #E4F6EE!important;
+  border: 1px solid #30BA78!important;
 }
 
 /* material tooltip - customize the style */

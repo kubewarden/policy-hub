@@ -11,7 +11,7 @@ class Hub extends React.Component {
     this.state = {
       descriptionCriteria: "",
       dataSet: null,
-      keywordsOptionsSelected: [],
+      resourcesOptionsSelected: [],
     };
   }
 
@@ -24,17 +24,17 @@ class Hub extends React.Component {
     this.setState({ dataSet: await response.json()});
   }
 
-  getDistinctSetOfKeywords() {
+  getDistinctSetOfResources() {
     if (!this.state.dataSet) {
       return [];
     }
-    let arrayWithDuplicateKeywords = [];
-    this.state.dataSet.forEach(p => arrayWithDuplicateKeywords = arrayWithDuplicateKeywords.concat(...p.keywords));
-    return Array.from(new Set(arrayWithDuplicateKeywords));
+    let arrayWithDuplicateResources = [];
+    this.state.dataSet.forEach(p => arrayWithDuplicateResources = arrayWithDuplicateResources.concat(...p.resources));
+    return Array.from(new Set(arrayWithDuplicateResources));
   }
 
-  onKeywordsFilterChange(e) {
-    this.setState({ keywordsOptionsSelected: e });
+  onResourcesFilterChange(e) {
+    this.setState({ resourcesOptionsSelected: e });
   }
 
   onDescriptionFilterChange(e) {
@@ -47,17 +47,17 @@ class Hub extends React.Component {
         p.description.toLowerCase().includes(this.state.descriptionCriteria.toLowerCase()))
       : [];
 
-    filteredDataSet = this.state.keywordsOptionsSelected.length > 0 ? filteredDataSet.filter(p =>
-        this.state.keywordsOptionsSelected.map(k => k.value).every(r => p.keywords.includes(r)))
+    filteredDataSet = this.state.resourcesOptionsSelected.length > 0 ? filteredDataSet.filter(p =>
+        this.state.resourcesOptionsSelected.map(k => k.value).every(r => p.resources.includes(r)))
       : filteredDataSet;
 
     return filteredDataSet;
   }
 
   render() {
-    let keywordsOptions = [];
-    this.getDistinctSetOfKeywords().forEach(k => {
-      keywordsOptions = [...keywordsOptions, {value: k, label: k}];
+    let resourcesOptions = [];
+    this.getDistinctSetOfResources().forEach(k => {
+      resourcesOptions = [...resourcesOptions, {value: k, label: k}];
     });
 
     return (
@@ -71,13 +71,13 @@ class Hub extends React.Component {
             onChange={(e) => this.onDescriptionFilterChange(e)}
             placeholder="Filter by description"
           />
-          <div className="keywords-select-container">
+          <div className="resources-select-container">
             <Select
-              value={this.state.keywordsOptionsSelected}
-              onChange={(e) => this.onKeywordsFilterChange(e)}
-              options={keywordsOptions}
+              value={this.state.resourcesOptionsSelected}
+              onChange={(e) => this.onResourcesFilterChange(e)}
+              options={resourcesOptions}
               isMulti={true}
-              placeholder="Filter by keywords"
+              placeholder="Filter by resources"
             />
           </div>
         </header>
