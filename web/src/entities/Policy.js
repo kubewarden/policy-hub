@@ -86,7 +86,7 @@ const PolicyItem = (props: Props) => {
             policy.download.url ?
               <a className="text-smaller link download"
                 href={policy.download.url}
-                target="_blank" rel="noopener noreferrer">
+                rel="noopener noreferrer">
                   <GetAppIcon />Download Policy
               </a>
             : null
