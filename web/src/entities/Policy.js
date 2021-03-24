@@ -90,7 +90,14 @@ const PolicyItem = (props: Props) => {
           <div className="not-a-real-link mutation">
             <MaterialTooltip arrow
                 title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
-             <div><SpellcheckIcon />{policy.mutation ? <EditIcon /> : null}</div>
+              <div>
+                <SpellcheckIcon color="primary" />
+                {
+                  policy.mutation ?
+                    <EditIcon  color="secondary" />
+                    : null
+                }
+              </div>
             </MaterialTooltip>
           </div>
         </aside>
