@@ -51,7 +51,7 @@ const PolicyItem = (props: Props) => {
       <div className="name">{policy.name}</div>
       <div className="content">
         <aside>
-          <a className="text-light text-smaller link"
+          <a className="text-smaller link"
               href={policy.homepage}
               target="_blank"
               rel="noopener noreferrer">
@@ -60,21 +60,21 @@ const PolicyItem = (props: Props) => {
           <br/>
           {
             policy.author.homepage ?
-              <a className="text-light text-smaller link"
+              <a className="text-smaller link"
                   href={policy.author.homepage}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Author">
                     <PersonIcon />{policy.author.name}
               </a>
-              : <span className="text-light text-smaller not-a-real-link"><PersonIcon />{policy.author.name}</span>
+              : <span className="text-smaller not-a-real-link"><PersonIcon />{policy.author.name}</span>
           }
           <br/>
           <br/>
           {
             policy.download.registry ?
               <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
-                <button className="text-smaller text-light button-link">
+                <button className="text-smaller button-link">
                   <FileCopyIcon />Copy registry
                   {copied ? <div className="inline-but-absolute-message">Copied!</div> : null}
                 </button>
@@ -93,13 +93,13 @@ const PolicyItem = (props: Props) => {
           }
           <br/>
           <br/>
-          <div className="text-light not-a-real-link mutation"
+          <div className="not-a-real-link mutation"
               title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
             <SpellcheckIcon />{policy.mutation ? <EditIcon /> : null}
           </div>
         </aside>
 
-        <div className="text-light text-bigger">
+        <div className="text-bigger">
           <Highlight
             text={policy.description}
             highlight={props.descriptionCriteria}

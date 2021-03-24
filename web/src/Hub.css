@@ -1,6 +1,5 @@
 a {
   color: #008ACF;
-  font-weight: 300;
   text-decoration: none;
 }
 a:hover {
@@ -90,7 +89,7 @@ article .content code {
   font-size: 1.1em;
 }
 .text-label {
-  color: #666;
+  color: #333;
   width: 70px;
   display: inline-block;
 }
