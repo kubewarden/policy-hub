@@ -7,6 +7,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import PersonIcon from '@material-ui/icons/Person';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import FileCopyIcon from '@material-ui/icons/FileCopy';
+import MaterialTooltip from "@material-ui/core/Tooltip";
 
 type Author = {
   name: String,
@@ -41,7 +42,7 @@ const PolicyItem = (props: Props) => {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
-    }, 1000);
+    }, 1500);
   };
 
   const policy = props.policy;
@@ -58,17 +59,21 @@ const PolicyItem = (props: Props) => {
                 <HomeIcon />Homepage
           </a>
           <br/>
-          {
-            policy.author.homepage ?
-              <a className="text-smaller link"
-                  href={policy.author.homepage}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Author">
-                    <PersonIcon />{policy.author.name}
-              </a>
-              : <span className="text-smaller not-a-real-link"><PersonIcon />{policy.author.name}</span>
-          }
+          <MaterialTooltip title="Author" arrow>
+            {
+              policy.author.homepage ?
+                <a className="text-smaller link"
+                    href={policy.author.homepage}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                      <PersonIcon />{policy.author.name}
+                </a>
+                : <span className="text-smaller not-a-real-link">
+                    <PersonIcon />
+                    {policy.author.name}
+                  </span>
+            }
+          </MaterialTooltip>
           <br/>
           <br/>
           {
@@ -82,9 +87,11 @@ const PolicyItem = (props: Props) => {
           }
           <br/>
           <br/>
-          <div className="not-a-real-link mutation"
-              title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
-            <SpellcheckIcon />{policy.mutation ? <EditIcon /> : null}
+          <div className="not-a-real-link mutation">
+            <MaterialTooltip arrow
+                title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
+             <div><SpellcheckIcon />{policy.mutation ? <EditIcon /> : null}</div>
+            </MaterialTooltip>
           </div>
         </aside>
 
@@ -101,13 +108,11 @@ const PolicyItem = (props: Props) => {
               <span className="text-light text-tiny text-label">REGISTRY&nbsp;</span>
               <code className="text-smaller">{policy.download.registry}</code>
               <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
-                <button
-                    id="copy-registry"
-                    className="text-small button-link"
-                    title="Copy registry">
-                  <FileCopyIcon />
-                  {copied ? <div className="inline-but-absolute-message">Copied!</div> : null}
-                </button>
+                <MaterialTooltip title={!copied ? "Copy registry" : "Copied!"} arrow>
+                  <button id="copy-registry" className="text-small button-link">
+                    <FileCopyIcon />
+                  </button>
+                </MaterialTooltip>
               </CopyToClipboard>
             </div>
             : null
@@ -120,7 +125,6 @@ const PolicyItem = (props: Props) => {
           <span className="text-light text-tiny text-label">KEYWORDS&nbsp;</span>
           {policy.keywords.map(k => <span className="badge keyword text-smaller" key={policy.name + "-" + k}>{k}</span>)}
         </div>
-
       </div>
     </article>
   );

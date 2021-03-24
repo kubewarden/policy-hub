@@ -157,15 +157,6 @@ article .content code {
   background-color: #FFECB5;
   border: 1px solid #FFC107;
 }
-/*** HACK ***/
-/* react-select */
-
-/* give the same style of the .badge.keyword */
-.css-1rhbuit-multiValue {
-  background-color: #FFECB5!important;
-  border: 1px solid #FFC107!important;
-}
-/*** END OF HACK ***/
 
 mark {
   background-color: #DC3545;
@@ -178,13 +169,23 @@ button {
 #copy-registry {
   vertical-align: middle;
 }
-.inline-but-absolute-message {
-  position: absolute;
-  top: 0px;
-  width: 50px;
-  right: -60px;
-  background-color: #0C322C;
-  color: #fff;
-  padding: .2em .4em;
-  font-weight: 600;
+
+
+
+/*** HACK ***/
+/* react-select - give the same style of the .badge.keyword */
+.css-1rhbuit-multiValue {
+  background-color: #FFECB5!important;
+  border: 1px solid #FFC107!important;
 }
+
+/* material tooltip - customize the style */
+.MuiTooltip-tooltip {
+  font-size: .8em!important;
+  background-color: #0C322C!important;
+}
+.MuiTooltip-arrow {
+  color: #0C322C!important;
+}
+
+/*** END OF HACK ***/
