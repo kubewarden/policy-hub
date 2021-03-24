@@ -9,21 +9,27 @@ a:hover {
 
 header {
   padding: 1em;
-  font-size: 2em;
   background-color:#008ACF;
   color: #f0f0f0;
 }
-header a {
+header .header-homepage {
+  font-size: 2em;
   color: inherit;
   font-weight: inherit;
 }
 header .filter-box {
   margin-left: 2em;
-  width: 50%;
-  padding: .3em .5em;
-  border: none;
-  border-radius: 5px;
+  width: 400px;
+  padding: .4em .5em;
 }
+
+header .keywords-select-container {
+  color: #333;
+  min-width: 220px;
+  display: inline-block;
+  margin-left: .5em;
+}
+
 article {
   background-color: #f7f7f7;
   border: 1px solid #ccc;
@@ -126,8 +132,8 @@ article .content code {
 
 .badge {
   margin: 0 .2em;
-  padding: 0 .5em;
-  border-radius: .3em;
+  padding: 3px 6px;
+  border-radius: 2px;
 }
 .badge.resource {
   background-color: #E4F6EE;
@@ -137,6 +143,15 @@ article .content code {
   background-color: #FFECB5;
   border: 1px solid #FFC107;
 }
+/*** HACK ***/
+/* react-select */
+
+/* give the same style of the .badge.keyword */
+.css-1rhbuit-multiValue {
+  background-color: #FFECB5!important;
+  border: 1px solid #FFC107!important;
+}
+/*** END OF HACK ***/
 
 mark {
   background-color: #DC3545;
