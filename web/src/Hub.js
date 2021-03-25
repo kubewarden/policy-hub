@@ -19,6 +19,14 @@ class Hub extends React.Component {
     return Array.from(new Set(arrayWithDuplicateResources));
   }
 
+  additionalResourceFilter(e) {
+    const newResourceToFilter = { value: e, label: e };
+    const currentSelection = this.state.resourcesOptionsSelected;
+    if (!currentSelection.map(s => s.value).includes(e)) {
+      this.setState({ resourcesOptionsSelected: currentSelection.concat(newResourceToFilter) });
+    }
+  }
+
   onResourcesFilterChange(e) {
     this.setState({ resourcesOptionsSelected: e });
   }
@@ -73,6 +81,7 @@ class Hub extends React.Component {
               .map(e =>
                 <PolicyItem policy={e} key={e.name}
                   descriptionCriteria={this.state.descriptionCriteria}
+                  additionalResourceFilter={(e) => this.additionalResourceFilter(e)}
                 />
               )
           }

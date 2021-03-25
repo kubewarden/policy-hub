@@ -146,6 +146,10 @@ article .content code {
   background-color: #E4F6EE;
   border: 1px solid #30BA78;
 }
+.badge.resource:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .badge.keyword  {
   background-color: #FFECB5;
   border: 1px solid #FFC107;
