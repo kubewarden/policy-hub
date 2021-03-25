@@ -29,13 +29,6 @@ header .resources-select-container {
   margin-left: .5em;
 }
 
-.loading {
-  padding: 3em 0;
-  width: 100%;
-  text-align: center;
-  font-size: 2em;
-}
-
 article {
   background-color: #fafafa;
   border: 1px solid #ccc;

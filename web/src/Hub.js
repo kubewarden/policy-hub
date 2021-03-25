@@ -3,31 +3,17 @@ import * as React from 'react';
 import PolicyItem from './entities/Policy';
 import Select from 'react-select';
 
-const DATA_URL = "https://raw.githubusercontent.com/chimera-kube/policy-hub/main/policy-hub.json";
-
 class Hub extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       descriptionCriteria: "",
-      dataSet: null,
+      dataSet: require('./data/policy-hub.json'),
       resourcesOptionsSelected: [],
     };
   }
 
-  componentWillMount() {
-    this.fetchData();
-  }
-
-  async fetchData() {
-    const response = await fetch(DATA_URL);
-    this.setState({ dataSet: await response.json()});
-  }
-
   getDistinctSetOfResources() {
-    if (!this.state.dataSet) {
-      return [];
-    }
     let arrayWithDuplicateResources = [];
     this.state.dataSet.forEach(p => arrayWithDuplicateResources = arrayWithDuplicateResources.concat(...p.resources));
     return Array.from(new Set(arrayWithDuplicateResources));
@@ -83,14 +69,12 @@ class Hub extends React.Component {
         </header>
         <section>
           {
-            !this.state.dataSet ?
-              <div className="loading">Loading..</div>
-              : this.filter()
-                  .map(e =>
-                    <PolicyItem policy={e} key={e.name}
-                      descriptionCriteria={this.state.descriptionCriteria}
-                    />
-                  )
+            this.filter()
+              .map(e =>
+                <PolicyItem policy={e} key={e.name}
+                  descriptionCriteria={this.state.descriptionCriteria}
+                />
+              )
           }
         </section>
       </div>
