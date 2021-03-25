@@ -53,7 +53,7 @@ article .name {
   border-bottom: 1px solid #ccc;
 }
 article .content {
-  padding: .5em 145px .5em .5em;
+  padding: .5em 145px 1em .5em;
   position: relative;
   height: 200px;
 }
@@ -167,8 +167,6 @@ button {
   vertical-align: middle;
 }
 
-
-
 /*** HACK ***/
 /* react-select - give the same style of the .badge.resources */
 .css-1rhbuit-multiValue {
@@ -184,5 +182,20 @@ button {
 .MuiTooltip-arrow {
   color: #0C322C!important;
 }
-
 /*** END OF HACK ***/
+
+/*** RESPONSIVE RULES ***/
+@media only screen and (min-width: 2200px) {
+  article {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  article {
+    width: 95%;
+  }
+  article .content {
+    height: auto;
+  }
+}
+/*** END OF RESPONSIVE RULES ***/
