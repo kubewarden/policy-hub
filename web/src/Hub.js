@@ -10,6 +10,7 @@ class Hub extends React.Component {
       descriptionCriteria: "",
       dataSet: require('./data/policy-hub.json'),
       resourcesOptionsSelected: [],
+      keywordsOptionsSelected: [],
     };
   }
 
@@ -17,6 +18,12 @@ class Hub extends React.Component {
     let arrayWithDuplicateResources = [];
     this.state.dataSet.forEach(p => arrayWithDuplicateResources = arrayWithDuplicateResources.concat(...p.resources));
     return Array.from(new Set(arrayWithDuplicateResources));
+  }
+
+  getDistinctSetOfKeywords() {
+    let arrayWithDuplicateKeywords = [];
+    this.state.dataSet.forEach(p => arrayWithDuplicateKeywords = arrayWithDuplicateKeywords.concat(...p.keywords));
+    return Array.from(new Set(arrayWithDuplicateKeywords));
   }
 
   additionalResourceFilter(e) {
@@ -27,8 +34,20 @@ class Hub extends React.Component {
     }
   }
 
+  additionalKeywordFilter(e) {
+    const newKeywordToFilter = { value: e, label: e };
+    const currentSelection = this.state.keywordsOptionsSelected;
+    if (!currentSelection.map(s => s.value).includes(e)) {
+      this.setState({ keywordsOptionsSelected: currentSelection.concat(newKeywordToFilter) });
+    }
+  }
+
   onResourcesFilterChange(e) {
     this.setState({ resourcesOptionsSelected: e });
+  }
+
+  onKeywordsFilterChange(e) {
+    this.setState({ keywordsOptionsSelected: e });
   }
 
   onDescriptionFilterChange(e) {
@@ -45,6 +64,10 @@ class Hub extends React.Component {
         this.state.resourcesOptionsSelected.map(k => k.value).every(r => p.resources.includes(r)))
       : filteredDataSet;
 
+    filteredDataSet = this.state.keywordsOptionsSelected.length > 0 ? filteredDataSet.filter(p =>
+        this.state.keywordsOptionsSelected.map(k => k.value).every(r => p.keywords.includes(r)))
+      : filteredDataSet;
+
     return filteredDataSet;
   }
 
@@ -54,24 +77,39 @@ class Hub extends React.Component {
       resourcesOptions = [...resourcesOptions, {value: k, label: k}];
     });
 
+    let keywordsOptions = [];
+    this.getDistinctSetOfKeywords().forEach(k => {
+      keywordsOptions = [...keywordsOptions, {value: k, label: k}];
+    });
+
     return (
       <div className="Hub">
         <header className="Hub-header">
           <a href="/policy-hub" className="header-homepage" rel="noopener noreferrer">Policy Hub</a>
-          <input
-            className="filter-box"
-            name="filter-description"
-            key="filter-description"
-            onChange={(e) => this.onDescriptionFilterChange(e)}
-            placeholder="Filter by description"
-          />
-          <div className="resources-select-container">
+          <div className="filter-box">
+            <input
+              name="filter-description"
+              key="filter-description"
+              onChange={(e) => this.onDescriptionFilterChange(e)}
+              placeholder="Filter by description"
+            />
+          </div>
+          <div className="filter-box resources-select-container">
             <Select
               value={this.state.resourcesOptionsSelected}
               onChange={(e) => this.onResourcesFilterChange(e)}
               options={resourcesOptions}
               isMulti={true}
               placeholder="Filter by resources"
+            />
+          </div>
+          <div className="filter-box keywords-select-container">
+            <Select
+              value={this.state.keywordsOptionsSelected}
+              onChange={(e) => this.onKeywordsFilterChange(e)}
+              options={keywordsOptions}
+              isMulti={true}
+              placeholder="Filter by keywords"
             />
           </div>
         </header>
@@ -82,6 +120,7 @@ class Hub extends React.Component {
                 <PolicyItem policy={e} key={e.name}
                   descriptionCriteria={this.state.descriptionCriteria}
                   additionalResourceFilter={(e) => this.additionalResourceFilter(e)}
+                  additionalKeywordFilter={(e) => this.additionalKeywordFilter(e)}
                 />
               )
           }

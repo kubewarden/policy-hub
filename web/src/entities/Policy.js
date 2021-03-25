@@ -138,7 +138,15 @@ const PolicyItem = (props: Props) => {
         </div>
         <div>
           <span className="text-light text-tiny text-label">KEYWORDS&nbsp;</span>
-          {policy.keywords.map(k => <span className="badge keyword text-smaller" key={policy.name + "-" + k}>{k}</span>)}
+          {policy.keywords.map(k =>
+            <MaterialTooltip title="Filter by this keyword" arrow key={policy.name + "-" + k}>
+              <button className="badge keyword text-smaller"
+                  onClick={() => props.additionalKeywordFilter(k)}>
+                {k}
+              </button>
+            </MaterialTooltip>
+            )
+          }
         </div>
       </div>
     </article>

@@ -16,17 +16,20 @@ header .header-homepage {
   color: inherit;
   font-weight: inherit;
 }
-header .filter-box {
+header .filter-box > input {
   margin-left: 2em;
   width: 400px;
-  padding: .4em .5em;
+  padding: .3em .5em;
+  border-radius: 4px;
+  border-style: solid;
 }
 
-header .resources-select-container {
+header .filter-box {
   color: #333;
   min-width: 220px;
   display: inline-block;
   margin-left: .5em;
+  vertical-align: bottom;
 }
 
 article {
@@ -146,7 +149,8 @@ article .content code {
   background-color: #E4F6EE;
   border: 1px solid #30BA78;
 }
-.badge.resource:hover {
+.badge.resource:hover,
+.badge.keyword:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -169,9 +173,17 @@ button {
 
 /*** HACK ***/
 /* react-select - give the same style of the .badge.resources */
-.css-1rhbuit-multiValue {
+.resources-select-container .css-1rhbuit-multiValue {
   background-color: #E4F6EE!important;
   border: 1px solid #30BA78!important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.keywords-select-container .css-1rhbuit-multiValue {
+  background-color: #FFECB5!important;
+  border: 1px solid #FFC107!important;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* material tooltip - customize the style */
