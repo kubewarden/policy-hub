@@ -127,8 +127,8 @@ const PolicyItem = (props: Props) => {
         <div>
           <span className="text-light text-tiny text-label">RESOURCES&nbsp;</span>
           {policy.resources.map(r =>
-            <MaterialTooltip title="Filter by this resource" arrow>
-              <button className="badge resource text-smaller" key={policy.name + "-" + r}
+            <MaterialTooltip title="Filter by this resource" arrow key={policy.name + "-" + r}>
+              <button className="badge resource text-smaller"
                   onClick={() => props.additionalResourceFilter(r)}>
                 {r}
               </button>
