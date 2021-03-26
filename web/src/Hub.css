@@ -73,7 +73,7 @@ article .name {
   border-bottom: 1px solid #eee;
 }
 article .content {
-  padding: 12px 150px 0 12px;
+  padding: 12px 150px 12px 12px;
   position: relative;
 }
 aside {
@@ -153,10 +153,12 @@ article .content code {
 }
 
 .mutation {
-  bottom: .5em;
-  position:absolute;
+  bottom: 0;
+  position: absolute;
   width: 90%;
   text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
 }
 
 .badge {
@@ -248,20 +250,35 @@ button {
   header .filter-box > input {
     width: 100%;
   }
-  /* article aside {
+  article aside {
     position: relative;
     border: none;
     width: 100%;
     top: auto;
     bottom: auto;
     right: auto;
-    padding: .5em;
+    padding: 12px 0 0 0;
   }
   article aside > * {
     display: inline-block;
+    margin: 0;
+    margin-right: 8px;
   }
   article .content {
-    padding: .5em;
-  } */
+    padding: 12px;
+  }
+  article aside .mutation {
+    position: relative;
+    bottom: auto;
+    display: inline-block;
+    border: none;
+    width: 80px;
+    vertical-align: middle;
+    padding: 0 12px;
+  }
+  article aside .mutation > * {
+    vertical-align: sub;
+    display: inline-block;
+  }
 }
 /*** END OF RESPONSIVE RULES ***/

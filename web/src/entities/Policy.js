@@ -51,57 +51,6 @@ const PolicyItem = (props: Props) => {
     <article>
       <div className="name">{policy.name}</div>
       <div className="content">
-        <aside>
-          <a className="text-smaller link"
-              href={policy.homepage}
-              target="_blank"
-              rel="noopener noreferrer">
-                <HomeIcon />Homepage
-          </a>
-          <br/>
-          <MaterialTooltip title="Author" arrow>
-            {
-              policy.author.homepage ?
-                <a className="text-smaller link"
-                    href={policy.author.homepage}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                      <PersonIcon />{policy.author.name}
-                </a>
-                : <span className="text-smaller not-a-real-link">
-                    <PersonIcon />
-                    {policy.author.name}
-                  </span>
-            }
-          </MaterialTooltip>
-          <br/>
-          <br/>
-          {
-            policy.download.url ?
-              <a className="text-smaller link download"
-                href={policy.download.url}
-                rel="noopener noreferrer">
-                  <GetAppIcon />Download Policy
-              </a>
-            : null
-          }
-          <br/>
-          <br/>
-          <div className="not-a-real-link mutation">
-            <MaterialTooltip arrow
-                title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
-              <div>
-                <SpellcheckIcon color="primary" />
-                {
-                  policy.mutation ?
-                    <EditIcon  color="secondary" />
-                    : null
-                }
-              </div>
-            </MaterialTooltip>
-          </div>
-        </aside>
-
         <div className="text-bigger text-description">
           <Highlight
             text={policy.description}
@@ -147,6 +96,59 @@ const PolicyItem = (props: Props) => {
             )
           }
         </div>
+        <aside>
+          <div>
+            <a className="text-smaller link"
+                href={policy.homepage}
+                target="_blank"
+                rel="noopener noreferrer">
+                  <HomeIcon />Homepage
+            </a>
+          </div>
+          <MaterialTooltip title="Author" arrow>
+            {
+              policy.author.homepage ?
+                <div>
+                  <a className="text-smaller link"
+                      href={policy.author.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                        <PersonIcon />{policy.author.name}
+                  </a>
+                </div>
+                : <div>
+                    <span className="text-smaller not-a-real-link">
+                      <PersonIcon />
+                      {policy.author.name}
+                    </span>
+                  </div>
+            }
+          </MaterialTooltip>
+          {
+            policy.download.url ?
+              <div>
+                <a className="text-smaller link download"
+                  href={policy.download.url}
+                  rel="noopener noreferrer">
+                    <GetAppIcon />Download Policy
+                </a>
+              </div>
+            : null
+          }
+          <div className="not-a-real-link mutation">
+            <MaterialTooltip arrow
+                title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
+              <div>
+                <SpellcheckIcon color="primary" />
+                {
+                  policy.mutation ?
+                    <EditIcon  color="secondary" />
+                    : null
+                }
+              </div>
+            </MaterialTooltip>
+          </div>
+        </aside>
       </div>
     </article>
   );
