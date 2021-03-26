@@ -7,7 +7,7 @@ a:hover {
 }
 
 header {
-  padding: 1em;
+  padding: 12px;
   background-color:#008ACF;
   color: #f0f0f0;
 }
@@ -39,7 +39,7 @@ header .filter-box > input {
 }
 
 section {
-  padding: 10px 20px;
+  padding: 10px 12px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -67,8 +67,7 @@ article:hover {
 
 article .name {
   text-align: center;
-  font-size: 1.3em;
-  font-weight: 500;
+  font-size: 1.2em;
   padding: 0 12px 4px 12px;
   border-bottom: 1px solid #eee;
 }
@@ -104,7 +103,12 @@ article .content code {
   border: 1px solid #ccc;
 }
 
+.text-bold {
+  font-family: 'Poppins-Bold';
+  font-weight: 600;
+}
 .text-light {
+  font-family: 'Poppins-Thin';
   font-weight: 300;
 }
 .text-tiny {
@@ -116,8 +120,11 @@ article .content code {
 .text-small {
   font-size: .9em;
 }
-.text-bigger {
+.text-big {
   font-size: 1.1em;
+}
+.text-bigger {
+  font-size: 1.2em;
 }
 .text-label {
   color: #333;
@@ -165,6 +172,7 @@ article .content code {
   margin-right: 4px;
   padding: 3px 6px;
   border-radius: 2px;
+  line-height: 1.2em;
 }
 .badge.resource {
   background-color: #E4F6EE;
@@ -279,6 +287,14 @@ button {
   article aside .mutation > * {
     vertical-align: sub;
     display: inline-block;
+  }
+  article .registry-wrapper {
+    display: none;
+  }
+
+  .badge {
+    margin-right: 4px;
+    padding: 1px 4px;
   }
 }
 /*** END OF RESPONSIVE RULES ***/

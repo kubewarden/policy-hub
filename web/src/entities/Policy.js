@@ -49,9 +49,9 @@ const PolicyItem = (props: Props) => {
 
   return (
     <article>
-      <div className="name">{policy.name}</div>
+      <div className="name text-bold">{policy.name}</div>
       <div className="content">
-        <div className="text-bigger text-description">
+        <div className="text-description text-light">
           <Highlight
             text={policy.description}
             highlight={props.descriptionCriteria}
@@ -59,7 +59,7 @@ const PolicyItem = (props: Props) => {
         </div>
         {
           policy.download.registry ?
-            <div>
+            <div className="registry-wrapper">
               <span className="text-light text-tiny text-label">REGISTRY&nbsp;</span>
               <code className="text-smaller">{policy.download.registry}</code>
               <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
@@ -98,7 +98,7 @@ const PolicyItem = (props: Props) => {
         </div>
         <aside>
           <div>
-            <a className="text-smaller link"
+            <a className="text-tiny link"
                 href={policy.homepage}
                 target="_blank"
                 rel="noopener noreferrer">
@@ -109,7 +109,7 @@ const PolicyItem = (props: Props) => {
             {
               policy.author.homepage ?
                 <div>
-                  <a className="text-smaller link"
+                  <a className="text-tiny link"
                       href={policy.author.homepage}
                       target="_blank"
                       rel="noopener noreferrer">
@@ -117,7 +117,7 @@ const PolicyItem = (props: Props) => {
                   </a>
                 </div>
                 : <div>
-                    <span className="text-smaller not-a-real-link">
+                    <span className="text-tiny not-a-real-link">
                       <PersonIcon />
                       {policy.author.name}
                     </span>
@@ -127,7 +127,7 @@ const PolicyItem = (props: Props) => {
           {
             policy.download.url ?
               <div>
-                <a className="text-smaller link download"
+                <a className="text-tiny link download"
                   href={policy.download.url}
                   rel="noopener noreferrer">
                     <GetAppIcon />Download Policy
