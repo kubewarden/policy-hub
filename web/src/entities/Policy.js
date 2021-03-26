@@ -102,13 +102,12 @@ const PolicyItem = (props: Props) => {
           </div>
         </aside>
 
-        <div className="text-bigger">
+        <div className="text-bigger text-description">
           <Highlight
             text={policy.description}
             highlight={props.descriptionCriteria}
           />
         </div>
-        <br/>
         {
           policy.download.registry ?
             <div>

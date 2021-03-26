@@ -86,31 +86,33 @@ class Hub extends React.Component {
       <div className="Hub">
         <header className="Hub-header">
           <a href="/policy-hub" className="header-homepage" rel="noopener noreferrer">Policy Hub</a>
-          <div className="filter-box">
-            <input
-              name="filter-description"
-              key="filter-description"
-              onChange={(e) => this.onDescriptionFilterChange(e)}
-              placeholder="Filter by description"
-            />
-          </div>
-          <div className="filter-box resources-select-container">
-            <Select
-              value={this.state.resourcesOptionsSelected}
-              onChange={(e) => this.onResourcesFilterChange(e)}
-              options={resourcesOptions}
-              isMulti={true}
-              placeholder="Filter by resources"
-            />
-          </div>
-          <div className="filter-box keywords-select-container">
-            <Select
-              value={this.state.keywordsOptionsSelected}
-              onChange={(e) => this.onKeywordsFilterChange(e)}
-              options={keywordsOptions}
-              isMulti={true}
-              placeholder="Filter by keywords"
-            />
+          <div className="filters-wrapper">
+            <div className="filter-box filter-description">
+              <input
+                name="filter-description"
+                key="filter-description"
+                onChange={(e) => this.onDescriptionFilterChange(e)}
+                placeholder="Filter by description"
+              />
+            </div>
+            <div className="filter-box resources-select-container">
+              <Select
+                value={this.state.resourcesOptionsSelected}
+                onChange={(e) => this.onResourcesFilterChange(e)}
+                options={resourcesOptions}
+                isMulti={true}
+                placeholder="Filter by resources"
+              />
+            </div>
+            <div className="filter-box keywords-select-container">
+              <Select
+                value={this.state.keywordsOptionsSelected}
+                onChange={(e) => this.onKeywordsFilterChange(e)}
+                options={keywordsOptions}
+                isMulti={true}
+                placeholder="Filter by keywords"
+              />
+            </div>
           </div>
         </header>
         <section>
