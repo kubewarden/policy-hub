@@ -105,36 +105,34 @@ const PolicyItem = (props: Props) => {
                   <HomeIcon />Homepage
             </a>
           </div>
-          <MaterialTooltip title="Author" arrow>
-            {
-              policy.author.homepage ?
-                <div>
+          <div>
+            <MaterialTooltip title="Author" arrow>
+              {
+                policy.author.homepage ?
                   <a className="text-tiny link"
                       href={policy.author.homepage}
                       target="_blank"
                       rel="noopener noreferrer">
                         <PersonIcon />{policy.author.name}
                   </a>
-                </div>
-                : <div>
-                    <span className="text-tiny not-a-real-link">
-                      <PersonIcon />
-                      {policy.author.name}
-                    </span>
-                  </div>
-            }
-          </MaterialTooltip>
-          {
-            policy.download.url ?
-              <div>
+                : <span className="text-tiny not-a-real-link">
+                    <PersonIcon />
+                    {policy.author.name}
+                  </span>
+              }
+            </MaterialTooltip>
+          </div>
+          <div>
+            {
+              policy.download.url ?
                 <a className="text-tiny link download"
                   href={policy.download.url}
                   rel="noopener noreferrer">
                     <GetAppIcon />Download Policy
                 </a>
-              </div>
-            : null
-          }
+              : null
+            }
+          </div>
           <div className="not-a-real-link mutation">
             <MaterialTooltip arrow
                 title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>

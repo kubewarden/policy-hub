@@ -1,21 +1,25 @@
 @font-face {
-  font-family: 'Poppins Bold';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Poppins Bold'), local('PoppinsBold') url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-family: 'MavenPro Light';
+  src: url('./fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format('woff2');
+  font-weight: 200;
 }
 @font-face {
-  font-family: 'Poppins';
-  font-style: normal;
+  font-family: 'MavenPro';
+  src: url('./fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format('woff2');
   font-weight: 400;
-  src: local('Poppins'), url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Poppins Thin';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Poppins Thin'), local('PoppinsThin') url('./fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+  font-family: 'MavenPro Bold';
+  src: url('./fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format('woff2');
+  font-weight: 600;
 }
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('./fonts/Dosis/Dosis-VariableFont_wght.ttf') format('woff2');
+  font-weight: 400;
+}
+
 
 * {
   box-sizing: border-box;
@@ -31,6 +35,6 @@ body {
   background-color: #eee;
   overflow: auto;
   color: #333;
-  font-family: 'Poppins';
+  font-family: 'MavenPro';
   font-size: 1em;
 }

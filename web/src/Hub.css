@@ -95,7 +95,8 @@ article .content .text-description {
   min-height: 4em;
 }
 article .content code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: 'Dosis';
+  font-size: .9em;
   background-color: #eee;
   padding: 2px 4px;
   line-height: 1.5em;
@@ -104,12 +105,10 @@ article .content code {
 }
 
 .text-bold {
-  font-family: 'Poppins-Bold';
-  font-weight: 600;
+  font-family: 'MavenPro Bold';
 }
 .text-light {
-  font-family: 'Poppins-Thin';
-  font-weight: 300;
+  font-family: 'MavenPro Light';
 }
 .text-tiny {
   font-size: .7em;
@@ -173,6 +172,7 @@ article .content code {
   padding: 3px 6px;
   border-radius: 2px;
   line-height: 1.2em;
+  font-family: 'Dosis';
 }
 .badge.resource {
   background-color: #E4F6EE;
@@ -207,12 +207,14 @@ button {
   border: 1px solid #30BA78!important;
   margin-top: 0;
   margin-bottom: 0;
+  font-family: 'Dosis';
 }
 .keywords-select-container .css-1rhbuit-multiValue {
   background-color: #FFECB5!important;
   border: 1px solid #FFC107!important;
   margin-top: 0;
   margin-bottom: 0;
+  font-family: 'Dosis';
 }
 .filter-box > div > div {
   border: 1px solid #666;
