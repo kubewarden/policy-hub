@@ -273,6 +273,7 @@ button {
     display: inline-block;
     margin: 0;
     margin-right: 8px;
+    vertical-align: middle;
   }
   article .content {
     padding: 12px;
@@ -280,11 +281,13 @@ button {
   article aside .mutation {
     position: relative;
     bottom: auto;
-    display: inline-block;
+    display: block;
     border: none;
-    width: 80px;
-    vertical-align: middle;
-    padding: 0 12px;
+    width: auto;
+    padding: 0;
+    margin-right: 0;
+    margin-top: 4px;
+    text-align: right;
   }
   article aside .mutation > * {
     vertical-align: sub;
