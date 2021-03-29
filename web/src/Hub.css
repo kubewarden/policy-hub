@@ -197,7 +197,7 @@ button {
   position: relative;
 }
 #copy-registry {
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 /*** HACK ***/
