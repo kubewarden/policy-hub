@@ -53,7 +53,7 @@ article {
   background-color: #fafafa;
   border: 1px solid #ccc;
   padding: 12px;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-top: 8px;
 }
 article:last-of-type {
@@ -98,7 +98,7 @@ article .content code {
   font-family: 'Dosis';
   font-size: .9em;
   background-color: #f7f7f7;
-  padding: 2px 4px;
+  padding: 2px 8px;
   line-height: 1.5em;
   border-radius: 2px;
   border: 1px solid #ccc;
