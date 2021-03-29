@@ -250,6 +250,9 @@ button {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  article:last-of-type {
+    margin-left: 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   header .filters-wrapper > * {
