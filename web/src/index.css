@@ -17,7 +17,7 @@
 @font-face {
   font-family: 'Dosis';
   src: url('./fonts/Dosis/Dosis-VariableFont_wght.ttf') format('woff2');
-  font-weight: 400;
+  font-weight: 500;
 }
 
 * {

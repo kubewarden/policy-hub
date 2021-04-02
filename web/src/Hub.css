@@ -1,5 +1,5 @@
 a {
-  color: #AB274F;
+  color: #257;
   text-decoration: none;
 }
 a:hover {
@@ -29,6 +29,7 @@ header .filters-wrapper > * {
   color: #333;
   margin-left: 4px;
   vertical-align: bottom;
+  font-size: .9em;
 }
 header .filter-box > input {
   width: 400px;
@@ -72,7 +73,7 @@ article .name {
   border-bottom: 1px solid #eee;
 }
 article .content {
-  padding: 12px 150px 12px 12px;
+  padding: 12px 28% 12px 12px;
   position: relative;
 }
 aside {
@@ -80,16 +81,14 @@ aside {
   top: 12px;
   bottom: 0;
   right: 0;
-  width: 130px;
-  padding-left: 8px;
-  border-left: 1px solid #eee;
+  width: 25%;
 }
 aside > * {
-  margin-top: 5px;
+  margin-top: 12px;
 }
 
 article .content > div {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 article .content .text-description {
   min-height: 4em;
@@ -98,10 +97,19 @@ article .content code {
   font-family: 'Dosis';
   font-size: .9em;
   background-color: #f7f7f7;
-  padding: 2px 8px;
-  line-height: 1.5em;
+  padding: 2px 6px;
+  line-height: 1.8em;
   border-radius: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
+}
+article .content .registry-wrapper .text-label {
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+article .content .links-wrapper a {
+  margin-right: 12px;
+  display: inline-block;
 }
 
 .text-bold {
@@ -125,8 +133,7 @@ article .content code {
 .text-bigger {
   font-size: 1.2em;
 }
-.text-label {
-  color: #333;
+aside .text-label {
   width: 70px;
   display: inline-block;
 }
@@ -136,7 +143,7 @@ article .content code {
   vertical-align: sub;
 }
 .button-link {
-  color: #AB274F;
+  color: #47a;
 }
 .not-a-real-link {
   vertical-align: sub;
@@ -161,27 +168,23 @@ article .content code {
 }
 
 .mutation {
-  bottom: 0;
+  bottom: 8px;
+  right: 8px;
   position: absolute;
-  width: 90%;
-  text-align: center;
-  border-top: 1px solid #eee;
   padding-top: 12px;
 }
 
 .badge {
   margin-right: 4px;
-  padding: 2px 6px;
-  border-radius: 2px;
   font-family: 'Dosis';
+  border: none;
+  background: none;
 }
 .badge.resource  {
-  background-color: #bd9;
-  border: 1px solid #573;
+  color: rgba(85, 119, 34, 1);
 }
 .badge.keyword {
-  background-color: #FFECB5;
-  border: 1px solid #FFC107;
+  color: rgba(221, 119, 0, 1);
 }
 .badge.resource:hover,
 .badge.keyword:hover {
@@ -190,7 +193,7 @@ article .content code {
 }
 
 mark {
-  background-color: #DC3545;
+  background-color: #AB274F;
   color: #fff;
 }
 
@@ -204,17 +207,13 @@ button {
 /*** HACK ***/
 /* react-select - give the same style of the .badge */
 .resources-select-container .css-1rhbuit-multiValue {
-  /* background-color: #FFECB5!important;
-  border: 1px solid #FFC107!important; */
-  background-color: #bd9;
-  border: 1px solid #573;
+  background-color: rgba(85, 119, 34, .3);
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Dosis';
 }
 .keywords-select-container .css-1rhbuit-multiValue {
-  background-color: #FFECB5;
-  border: 1px solid #FFC107;
+  background-color: rgba(221, 119, 0, .3);
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Dosis';
@@ -273,7 +272,7 @@ button {
     top: auto;
     bottom: auto;
     right: auto;
-    padding: 12px 0 0 0;
+    padding: 20px 0 0 0;
   }
   article aside > * {
     display: inline-block;

@@ -60,7 +60,7 @@ const PolicyItem = (props: Props) => {
         {
           policy.download.registry ?
             <div className="registry-wrapper">
-              <span className="text-light text-tiny text-label">REGISTRY&nbsp;</span>
+              <div className="text-light text-tiny text-label">REGISTRY</div>
               <code className="text-smaller">{policy.download.registry}</code>
               <CopyToClipboard text={policy.download.registry} onCopy={() => copyDone()}>
                 <MaterialTooltip title={!copied ? "Copy registry" : "Copied!"} arrow>
@@ -72,65 +72,61 @@ const PolicyItem = (props: Props) => {
             </div>
             : null
         }
-        <div>
-          <span className="text-light text-tiny text-label">RESOURCES&nbsp;</span>
-          {policy.resources.map(r =>
-            <MaterialTooltip title="Filter by this resource" arrow key={policy.name + "-" + r}>
-              <button className="badge resource text-small"
-                  onClick={() => props.additionalResourceFilter(r)}>
-                {r}
-              </button>
-            </MaterialTooltip>
-            )
+        <div class="links-wrapper">
+          <a className="text-smaller link"
+              href={policy.homepage}
+              target="_blank"
+              rel="noopener noreferrer">
+                <HomeIcon />Homepage
+          </a>
+          <MaterialTooltip title="Author" arrow>
+            {
+              policy.author.homepage ?
+                <a className="text-smaller link"
+                    href={policy.author.homepage}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                      <PersonIcon />{policy.author.name}
+                </a>
+              : <span className="text-smaller not-a-real-link">
+                  <PersonIcon />
+                  {policy.author.name}
+                </span>
+            }
+          </MaterialTooltip>
+          {
+            policy.download.url ?
+              <a className="text-smaller link download"
+                href={policy.download.url}
+                rel="noopener noreferrer">
+                  <GetAppIcon />Download Policy
+              </a>
+            : null
           }
-        </div>
-        <div>
-          <span className="text-light text-tiny text-label">KEYWORDS&nbsp;</span>
-          {policy.keywords.map(k =>
-            <MaterialTooltip title="Filter by this keyword" arrow key={policy.name + "-" + k}>
-              <button className="badge keyword text-small"
-                  onClick={() => props.additionalKeywordFilter(k)}>
-                {k}
-              </button>
-            </MaterialTooltip>
-            )
-          }
-        </div>
+        </div> 
         <aside>
           <div>
-            <a className="text-smaller link"
-                href={policy.homepage}
-                target="_blank"
-                rel="noopener noreferrer">
-                  <HomeIcon />Homepage
-            </a>
+            <span className="text-light text-tiny text-label">RESOURCES</span>
+            {policy.resources.map((r, i) =>
+              <MaterialTooltip title="Filter by this resource" arrow key={policy.name + "-" + r}>
+                <button className="badge resource text-small"
+                    onClick={() => props.additionalResourceFilter(r)}>
+                  {r}{i < policy.resources.length -1 ? <span>,&nbsp;</span> : null}
+                </button>
+              </MaterialTooltip>
+              )
+            }
           </div>
           <div>
-            <MaterialTooltip title="Author" arrow>
-              {
-                policy.author.homepage ?
-                  <a className="text-smaller link"
-                      href={policy.author.homepage}
-                      target="_blank"
-                      rel="noopener noreferrer">
-                        <PersonIcon />{policy.author.name}
-                  </a>
-                : <span className="text-smaller not-a-real-link">
-                    <PersonIcon />
-                    {policy.author.name}
-                  </span>
-              }
-            </MaterialTooltip>
-          </div>
-          <div>
-            {
-              policy.download.url ?
-                <a className="text-smaller link download"
-                  href={policy.download.url}
-                  rel="noopener noreferrer">
-                    <GetAppIcon />Download Policy
-                </a>
-              : null
+            <span className="text-light text-tiny text-label">KEYWORDS</span>
+            {policy.keywords.map((k, i) =>
+              <MaterialTooltip title="Filter by this keyword" arrow key={policy.name + "-" + k}>
+                <button className="badge keyword text-small"
+                    onClick={() => props.additionalKeywordFilter(k)}>
+                  {k}{i < policy.keywords.length -1 ? <span>,&nbsp;</span> : null}
+                </button>
+              </MaterialTooltip>
+              )
             }
           </div>
           <div className="not-a-real-link mutation">
