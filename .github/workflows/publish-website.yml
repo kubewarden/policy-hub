@@ -28,28 +28,8 @@ jobs:
         npm install
         yarn build
 
-    - name: Push to gh-pages
-      run: |
-        echo -e "\n${BOLD}Setting up Git${PLAIN}"
-        git config --global user.name "${GITHUB_ACTOR}"
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        echo "machine github.com login ${GITHUB_ACTOR} password ${PUSH_TOKEN}" > ~/.netrc
-
-        git clone --depth=1 --single-branch --branch gh-pages "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" /tmp/gh-pages
-        rm -rf /tmp/gh-pages/*
-
-        cp -r web/build/* /tmp/gh-pages
-
-        echo -e "\n${BOLD}Commiting${PLAIN}"
-        cd /tmp/gh-pages
-
-        [ -n "${INPUT_CNAME}" ] && \
-          echo "${INPUT_CNAME}" > CNAME
-
-        git add -A && git commit --allow-empty -am "Publishing Site ${NAME} at ${GITHUB_SHA} on $(date -u)"
-
-
-        echo -e "\n${BOLD}Pushing${PLAIN}"
-        git push --force
-
-        echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed!${PLAIN}"
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./web/build
