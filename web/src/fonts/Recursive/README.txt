@@ -1,23 +1,49 @@
-Maven Pro Variable Font
+Recursive Variable Font
 =======================
 
-This download contains Maven Pro as both a variable font and static fonts.
+This download contains Recursive as both a variable font and static fonts.
 
-Maven Pro is a variable font with this axis:
+Recursive is a variable font with these axes:
+  CASL
+  CRSV
+  MONO
+  slnt
   wght
 
 This means all the styles are contained in a single file:
-  MavenPro-VariableFont_wght.ttf
+  Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Maven Pro:
-  static/MavenPro-Regular.ttf
-  static/MavenPro-Medium.ttf
-  static/MavenPro-SemiBold.ttf
-  static/MavenPro-Bold.ttf
-  static/MavenPro-ExtraBold.ttf
-  static/MavenPro-Black.ttf
+in those cases you can use the static font files for Recursive:
+  static/Recursive-Light.ttf
+  static/Recursive-Regular.ttf
+  static/Recursive-Medium.ttf
+  static/Recursive-SemiBold.ttf
+  static/Recursive-Bold.ttf
+  static/Recursive-ExtraBold.ttf
+  static/Recursive-Black.ttf
+  static/Recursive_Monospace-Light.ttf
+  static/Recursive_Monospace-Regular.ttf
+  static/Recursive_Monospace-Medium.ttf
+  static/Recursive_Monospace-SemiBold.ttf
+  static/Recursive_Monospace-Bold.ttf
+  static/Recursive_Monospace-ExtraBold.ttf
+  static/Recursive_Monospace-Black.ttf
+  static/Recursive_Casual-Light.ttf
+  static/Recursive_Casual-Regular.ttf
+  static/Recursive_Casual-Medium.ttf
+  static/Recursive_Casual-SemiBold.ttf
+  static/Recursive_Casual-Bold.ttf
+  static/Recursive_Casual-ExtraBold.ttf
+  static/Recursive_Casual-Black.ttf
+  static/Recursive_Monospace,Casual-Light.ttf
+  static/Recursive_Monospace,Casual-Regular.ttf
+  static/Recursive_Monospace,Casual-Medium.ttf
+  static/Recursive_Monospace,Casual-SemiBold.ttf
+  static/Recursive_Monospace,Casual-Bold.ttf
+  static/Recursive_Monospace,Casual-ExtraBold.ttf
+  static/Recursive_Monospace,Casual-Black.ttf
 
 Get started
 -----------

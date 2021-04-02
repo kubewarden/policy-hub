@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'MavenPro Light';
-  src: url('./fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format('woff2');
-  font-weight: 200;
+  font-family: 'Recursive Light';
+  src: url('./fonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf') format('woff2');
+  font-weight: 300;
 }
 @font-face {
-  font-family: 'MavenPro';
-  src: url('./fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format('woff2');
+  font-family: 'Recursive';
+  src: url('./fonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'MavenPro Bold';
-  src: url('./fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format('woff2');
+  font-family: 'Recursive Bold';
+  src: url('./fonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf') format('woff2');
   font-weight: 600;
 }
 
@@ -19,7 +19,6 @@
   src: url('./fonts/Dosis/Dosis-VariableFont_wght.ttf') format('woff2');
   font-weight: 400;
 }
-
 
 * {
   box-sizing: border-box;
@@ -35,6 +34,6 @@ body {
   background-color: #eee;
   overflow: auto;
   color: #333;
-  font-family: 'MavenPro';
+  font-family: 'Recursive';
   font-size: 1em;
 }

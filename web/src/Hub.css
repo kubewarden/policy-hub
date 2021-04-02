@@ -1,5 +1,5 @@
 a {
-  color: #008ACF;
+  color: #AB274F;
   text-decoration: none;
 }
 a:hover {
@@ -8,7 +8,7 @@ a:hover {
 
 header {
   padding: 12px;
-  background-color:#008ACF;
+  background-color:#1b2031;
   color: #f0f0f0;
 }
 header .header-homepage {
@@ -105,10 +105,10 @@ article .content code {
 }
 
 .text-bold {
-  font-family: 'MavenPro Bold';
+  font-family: 'Recursive Bold';
 }
 .text-light {
-  font-family: 'MavenPro Light';
+  font-family: 'Recursive Light';
 }
 .text-tiny {
   font-size: .7em;
@@ -134,7 +134,9 @@ article .content code {
 .link,
 .button-link {
   vertical-align: sub;
-  color: #008ACF;
+}
+.button-link {
+  color: #AB274F;
 }
 .not-a-real-link {
   vertical-align: sub;
@@ -169,23 +171,22 @@ article .content code {
 
 .badge {
   margin-right: 4px;
-  padding: 3px 6px;
+  padding: 2px 6px;
   border-radius: 2px;
-  line-height: 1.2em;
   font-family: 'Dosis';
 }
-.badge.resource {
-  background-color: #E4F6EE;
-  border: 1px solid #30BA78;
+.badge.resource  {
+  background-color: #bd9;
+  border: 1px solid #573;
+}
+.badge.keyword {
+  background-color: #FFECB5;
+  border: 1px solid #FFC107;
 }
 .badge.resource:hover,
 .badge.keyword:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-.badge.keyword  {
-  background-color: #FFECB5;
-  border: 1px solid #FFC107;
 }
 
 mark {
@@ -201,17 +202,19 @@ button {
 }
 
 /*** HACK ***/
-/* react-select - give the same style of the .badge.resources */
+/* react-select - give the same style of the .badge */
 .resources-select-container .css-1rhbuit-multiValue {
-  background-color: #E4F6EE!important;
-  border: 1px solid #30BA78!important;
+  /* background-color: #FFECB5!important;
+  border: 1px solid #FFC107!important; */
+  background-color: #bd9;
+  border: 1px solid #573;
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Dosis';
 }
 .keywords-select-container .css-1rhbuit-multiValue {
-  background-color: #FFECB5!important;
-  border: 1px solid #FFC107!important;
+  background-color: #FFECB5;
+  border: 1px solid #FFC107;
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Dosis';
@@ -298,11 +301,6 @@ button {
   }
   article .registry-wrapper {
     display: none;
-  }
-
-  .badge {
-    margin-right: 4px;
-    padding: 1px 4px;
   }
 }
 /*** END OF RESPONSIVE RULES ***/

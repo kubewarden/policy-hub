@@ -51,7 +51,7 @@ const PolicyItem = (props: Props) => {
     <article>
       <div className="name text-bold">{policy.name}</div>
       <div className="content">
-        <div className="text-description text-light">
+        <div className="text-description">
           <Highlight
             text={policy.description}
             highlight={props.descriptionCriteria}
@@ -76,7 +76,7 @@ const PolicyItem = (props: Props) => {
           <span className="text-light text-tiny text-label">RESOURCES&nbsp;</span>
           {policy.resources.map(r =>
             <MaterialTooltip title="Filter by this resource" arrow key={policy.name + "-" + r}>
-              <button className="badge resource text-smaller"
+              <button className="badge resource text-small"
                   onClick={() => props.additionalResourceFilter(r)}>
                 {r}
               </button>
@@ -88,7 +88,7 @@ const PolicyItem = (props: Props) => {
           <span className="text-light text-tiny text-label">KEYWORDS&nbsp;</span>
           {policy.keywords.map(k =>
             <MaterialTooltip title="Filter by this keyword" arrow key={policy.name + "-" + k}>
-              <button className="badge keyword text-smaller"
+              <button className="badge keyword text-small"
                   onClick={() => props.additionalKeywordFilter(k)}>
                 {k}
               </button>
@@ -98,7 +98,7 @@ const PolicyItem = (props: Props) => {
         </div>
         <aside>
           <div>
-            <a className="text-tiny link"
+            <a className="text-smaller link"
                 href={policy.homepage}
                 target="_blank"
                 rel="noopener noreferrer">
@@ -109,13 +109,13 @@ const PolicyItem = (props: Props) => {
             <MaterialTooltip title="Author" arrow>
               {
                 policy.author.homepage ?
-                  <a className="text-tiny link"
+                  <a className="text-smaller link"
                       href={policy.author.homepage}
                       target="_blank"
                       rel="noopener noreferrer">
                         <PersonIcon />{policy.author.name}
                   </a>
-                : <span className="text-tiny not-a-real-link">
+                : <span className="text-smaller not-a-real-link">
                     <PersonIcon />
                     {policy.author.name}
                   </span>
@@ -125,7 +125,7 @@ const PolicyItem = (props: Props) => {
           <div>
             {
               policy.download.url ?
-                <a className="text-tiny link download"
+                <a className="text-smaller link download"
                   href={policy.download.url}
                   rel="noopener noreferrer">
                     <GetAppIcon />Download Policy
