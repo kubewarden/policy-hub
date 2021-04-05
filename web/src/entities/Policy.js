@@ -72,7 +72,7 @@ const PolicyItem = (props: Props) => {
             </div>
             : null
         }
-        <div class="links-wrapper">
+        <div className="links-wrapper">
           <a className="text-smaller link"
               href={policy.homepage}
               target="_blank"
