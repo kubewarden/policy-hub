@@ -226,10 +226,10 @@ button {
 /* material tooltip - customize the style */
 .MuiTooltip-tooltip {
   font-size: .8em!important;
-  background-color: #0C322C!important;
+  background-color: #1b2031!important;
 }
 .MuiTooltip-arrow {
-  color: #0C322C!important;
+  color: #1b2031!important;
 }
 /*** END OF HACK ***/
 
