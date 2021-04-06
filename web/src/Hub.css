@@ -154,7 +154,10 @@ aside .text-label {
 .button-link svg {
   font-size: inherit;
   vertical-align: inherit;
-  margin: 0 .2em;
+  margin: 0 4px 0 0;
+}
+.not-a-real-link svg {
+  margin: 0 2px 0 0;
 }
 .button-link {
   border: none;
@@ -202,6 +205,7 @@ button {
 }
 #copy-registry {
   vertical-align: text-bottom;
+  margin-left: 8px;
 }
 
 /*** HACK ***/
