@@ -92,6 +92,7 @@ article .content > div {
 }
 article .content .text-description {
   min-height: 4em;
+  line-height: 1.4em;
 }
 article .content code {
   font-family: 'Dosis';
