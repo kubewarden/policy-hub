@@ -86,7 +86,7 @@ class Hub extends React.Component {
     return (
       <div className="Hub">
         <header className="Hub-header">
-          <a href="/policy-hub" className="header-homepage" rel="noopener noreferrer">Policy Hub</a>
+          <a href="/" className="header-homepage" rel="noopener noreferrer">Policy Hub</a>
           <div className="filters-wrapper">
             <div className="filter-box filter-description">
               <input
