@@ -227,6 +227,12 @@ button {
   border: 1px solid #666;
   border-radius: 4px;
 }
+.css-26l3qy-menu > div > div {
+  background-color: transparent;
+}
+.css-26l3qy-menu > div > div:hover {
+  background-color: #c0cadf;
+}
 
 /* material tooltip - customize the style */
 .MuiTooltip-tooltip {
