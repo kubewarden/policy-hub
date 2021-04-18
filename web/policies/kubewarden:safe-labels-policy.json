@@ -1,0 +1,20 @@
+{
+  "name": "safe-lables",
+  "description": "A policy that validates Kubernetes' resource labels",
+  "homepage": "https://github.com/kubewarden/safe-labels-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/safe-labels:v0.1.2",
+    "url": "https://github.com/kubewarden/safe-labels-policy/releases/download/v0.1.2/policy.wasm"
+  },
+  "keywords": [
+    "Labels"
+  ],
+  "resources": [
+    "*"
+  ],
+  "mutation": false
+}
