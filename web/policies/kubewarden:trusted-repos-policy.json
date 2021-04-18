@@ -1,0 +1,22 @@
+{
+  "name": "trusted-repos",
+  "description": "Restrict what registries, tags and images can be used",
+  "homepage": "https://github.com/kubewarden/trusted-repos-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/trusted-repos:v0.1.2",
+    "url": "https://github.com/kubewarden/trusted-repos-policy/releases/download/v0.1.2/policy.wasm"
+  },
+  "keywords": [
+    "Image",
+    "Registry",
+    "Tag"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false
+}
