@@ -1,16 +1,32 @@
 @font-face {
-  font-family: 'Recursive Light';
-  src: url('./fonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf') format('woff2');
+  font-family: 'Roboto Light';
+  src: url('./fonts/Roboto/Roboto-Light.ttf') format('woff2');
   font-weight: 300;
 }
 @font-face {
-  font-family: 'Recursive';
-  src: url('./fonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf') format('woff2');
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Regular.ttf') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Recursive Bold';
-  src: url('./fonts/Recursive/Recursive-VariableFont_CASL,CRSV,MONO,slnt,wght.ttf') format('woff2');
+  font-family: 'Roboto Bold';
+  src: url('./fonts/Roboto/Roboto-Bold.ttf') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url('./fonts/Poppins/Poppins-Light.ttf') format('woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-Regular.ttf') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('./fonts/Poppins/Poppins-Bold.ttf') format('woff2');
   font-weight: 600;
 }
 
@@ -29,9 +45,9 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: #fff;
   overflow: auto;
   color: #333;
-  font-family: 'Recursive';
+  font-family: 'Roboto', 'sans-serif';
   font-size: 1em;
 }

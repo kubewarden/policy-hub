@@ -49,7 +49,7 @@ const PolicyItem = (props: Props) => {
 
   return (
     <article>
-      <div className="name text-bold">{policy.name}</div>
+      <div className="name">{policy.name}</div>
       <div className="content">
         <div className="text-description">
           <Highlight

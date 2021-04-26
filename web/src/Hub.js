@@ -3,6 +3,17 @@ import * as React from 'react';
 import PolicyItem from './entities/Policy';
 import Select from 'react-select';
 import DataSet from './data/policy-hub.json';
+import LogoKubewarden from './logo-kubewarden.svg'
+import LogoNoText from './logo-no-text.svg'
+
+function adjustSectionHeight() {
+  const footerHeight = document.getElementsByTagName('footer')[0].offsetHeight;
+  console.log(footerHeight);
+  const headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
+  console.log(headerHeight);
+  document.getElementsByTagName('section')[0].style.minHeight =
+      (window.innerHeight - footerHeight - headerHeight- 31) + "px";
+}
 
 class Hub extends React.Component {
   constructor(props) {
@@ -13,6 +24,13 @@ class Hub extends React.Component {
       resourcesOptionsSelected: [],
       keywordsOptionsSelected: [],
     };
+  }
+
+  componentDidMount() {
+    adjustSectionHeight();
+  }
+  componentDidUpdate() {
+    adjustSectionHeight();
   }
 
   getDistinctSetOfResources() {
@@ -86,7 +104,12 @@ class Hub extends React.Component {
     return (
       <div className="Hub">
         <header className="Hub-header">
-          <a href="/" className="header-homepage" rel="noopener noreferrer">Policy Hub</a>
+          <div className="header-links">
+            <a href="/" className="header-homepage" rel="noopener noreferrer">
+              <img src={LogoNoText} /> POLICY HUB
+            </a>
+            <a href="https://www.kubewarden.io/" className="main-site">KUBEWARDEN</a>
+          </div>
           <div className="filters-wrapper">
             <div className="filter-box filter-description">
               <input
@@ -128,6 +151,11 @@ class Hub extends React.Component {
               )
           }
         </section>
+        <footer>
+          <a href="https://www.kubewarden.io/" className="kubewarden-logo">
+            <img src={LogoKubewarden} />
+          </a>
+        </footer>
       </div>
     );
   }
