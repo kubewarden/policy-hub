@@ -97,7 +97,7 @@ article {
   margin-bottom: 16px;
 }
 article:last-of-type {
-  margin-left: .5%;
+  margin-left: 1%;
 }
 article:hover {
   background-color: #fefefe;
