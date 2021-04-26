@@ -106,7 +106,7 @@ class Hub extends React.Component {
         <header className="Hub-header">
           <div className="header-links">
             <a href="/" className="header-homepage" rel="noopener noreferrer">
-              <img src={LogoNoText} /> POLICY HUB
+              <img src={LogoNoText} alt="Kubewarden Policy Hub Logo" /> POLICY HUB
             </a>
             <a href="https://www.kubewarden.io/" className="main-site">KUBEWARDEN</a>
           </div>
@@ -153,7 +153,7 @@ class Hub extends React.Component {
         </section>
         <footer>
           <a href="https://www.kubewarden.io/" className="kubewarden-logo">
-            <img src={LogoKubewarden} />
+            <img src={LogoKubewarden} alt="Kubewarden main site logo" />
           </a>
         </footer>
       </div>
