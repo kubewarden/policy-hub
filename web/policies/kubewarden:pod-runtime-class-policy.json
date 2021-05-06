@@ -1,0 +1,22 @@
+{
+  "name": "pod-runtime",
+  "description": "Control Pod runtimeClass usage",
+  "homepage": "https://github.com/kubewarden/pod-runtime",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/pod-runtime:v0.1.0",
+    "url": "https://github.com/kubewarden/pod-runtime-class-policy/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "Pod",
+    "Runtime",
+    "Container Runtime"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": true
+}
