@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/ingress:v0.1.6",
-    "url": "https://github.com/kubewarden/ingress-policy/releases/download/v0.1.6/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/ingress:v0.1.8",
+    "url": "https://github.com/kubewarden/ingress-policy/releases/download/v0.1.8/policy.wasm"
   },
   "keywords": [
     "Ingress"
