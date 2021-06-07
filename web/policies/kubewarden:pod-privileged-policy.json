@@ -7,11 +7,12 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/pod-privileged-policy:v0.1.6",
-    "url": "https://github.com/kubewarden/pod-privileged-policy/releases/download/v0.1.6/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/pod-privileged:v0.1.7",
+    "url": "https://github.com/kubewarden/pod-privileged-policy/releases/download/v0.1.7/policy.wasm"
   },
   "keywords": [
     "PSP",
+    "Pod",
     "Container",
     "Privileged"
   ],
