@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/psp-host-namespaces:v0.0.3",
-    "url": "https://github.com/kubewarden/psp-host-namespaces/releases/download/v0.0.3/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/psp-host-namespaces:v0.0.4",
+    "url": "https://github.com/kubewarden/psp-host-namespaces/releases/download/v0.0.4/policy.wasm"
   },
   "keywords": [
     "PSP",
