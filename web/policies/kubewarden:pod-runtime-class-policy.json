@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/pod-runtime:v0.1.1",
-    "url": "https://github.com/kubewarden/pod-runtime-class-policy/releases/download/v0.1.1/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/pod-runtime:v0.1.2",
+    "url": "https://github.com/kubewarden/pod-runtime-class-policy/releases/download/v0.1.2/policy.wasm"
   },
   "keywords": [
     "Pod",
@@ -18,5 +18,6 @@
   "resources": [
     "Pod"
   ],
-  "mutation": true
+  "mutation": true,
+  "context-aware": false
 }
