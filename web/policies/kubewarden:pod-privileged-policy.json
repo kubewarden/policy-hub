@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/pod-privileged:v0.1.7",
-    "url": "https://github.com/kubewarden/pod-privileged-policy/releases/download/v0.1.7/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/pod-privileged:v0.1.8",
+    "url": "https://github.com/kubewarden/pod-privileged-policy/releases/download/v0.1.8/policy.wasm"
   },
   "keywords": [
     "PSP",
@@ -19,5 +19,6 @@
   "resources": [
     "Pod"
   ],
-  "mutation": false
+  "mutation": false,
+  "context-aware": false
 }
