@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/trusted-repos:v0.1.5",
-    "url": "https://github.com/kubewarden/trusted-repos-policy/releases/download/v0.1.5/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/trusted-repos:v0.1.6",
+    "url": "https://github.com/kubewarden/trusted-repos-policy/releases/download/v0.1.6/policy.wasm"
   },
   "keywords": [
     "Image",
