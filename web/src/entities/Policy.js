@@ -8,6 +8,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import MaterialTooltip from "@material-ui/core/Tooltip";
+import SyncIcon from '@material-ui/icons/Sync';
 
 type Author = {
   name: String,
@@ -28,6 +29,7 @@ export type Policy = {
   keywords: Array<String>,
   resources: Array<String>,
   mutation: Boolean,
+  contextAware: Boolean,
 }
 
 type Props = {
@@ -129,10 +131,10 @@ const PolicyItem = (props: Props) => {
               )
             }
           </div>
-          <div className="not-a-real-link mutation">
+          <div className="icons-wrapper">
             <MaterialTooltip arrow
                 title={policy.mutation ? "Validation + Mutation Policy" : "Validation Policy"}>
-              <div>
+              <div className="icon-badge">
                 <SpellcheckIcon color="primary" />
                 {
                   policy.mutation ?
@@ -141,6 +143,13 @@ const PolicyItem = (props: Props) => {
                 }
               </div>
             </MaterialTooltip>
+            {
+              policy.contextAware ?
+                <MaterialTooltip arrow title="Context Aware">
+                  <div className="icon-badge"><SyncIcon color="primary" /></div>
+                </MaterialTooltip>
+                : null
+            }
           </div>
         </aside>
       </div>

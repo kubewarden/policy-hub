@@ -8,7 +8,6 @@ a:hover {
 
 header {
   padding: 0;
-  margin-bottom: 16px;
   border-bottom: 8px solid #0f0f0f;
 }
 header .header-links {
@@ -45,7 +44,7 @@ header .header-homepage {
 }
 header .filters-wrapper {
   vertical-align: bottom;
-  background-color:#bc2a46;
+  background-color: #bc2a46;
   color: #f0f0f0;
 }
 header .filters-wrapper > * {
@@ -54,7 +53,7 @@ header .filters-wrapper > * {
   color: #333;
   margin-right: 8px;
   vertical-align: bottom;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 header .filter-box > input {
   width: 400px;
@@ -65,9 +64,8 @@ header .filter-box > input {
 }
 
 footer {
-  margin-top: 16px;
   border-top: 8px solid #bc2a46;
-  background-color: #0F0F0f;
+  background-color: #0f0f0f;
   padding: 8px 12px;
 }
 footer .kubewarden-logo {
@@ -78,18 +76,19 @@ footer .kubewarden-logo img {
 }
 
 section {
-  padding: 0 12px;
+  padding: 16px 12px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
+  background-color: #fafafa;
 }
 article {
-  flex: 0 0 48%;
-  max-width: 48%;
-  background-color: #f7f7f7;
+  flex: 0 0 32%;
+  max-width: 32%;
+  background-color: #fff;
   border: 1px solid #c0c0c0;
   padding: 12px;
   border-radius: 4px;
@@ -97,12 +96,7 @@ article {
   margin-bottom: 16px;
 }
 article:last-of-type {
-  margin-left: 1%;
-}
-article:hover {
-  background-color: #fefefe;
-  border-color: #aaa;
-  box-shadow: 0px 0px 8px #561503;
+  margin-left: 0.66%;
 }
 
 article .name {
@@ -136,8 +130,8 @@ article .content .text-description {
   font-size: 1.1em;
 }
 article .content code {
-  font-family: 'Dosis';
-  font-size: .9em;
+  font-family: "Dosis";
+  font-size: 0.9em;
   background-color: #f7f7f7;
   padding: 2px 6px;
   line-height: 1.8em;
@@ -155,19 +149,19 @@ article .content .links-wrapper a {
 }
 
 .text-bold {
-  font-family: 'Roboto Bold';
+  font-family: "Roboto Bold";
 }
 .text-light {
-  font-family: 'Roboto Light';
+  font-family: "Roboto Light";
 }
 .text-tiny {
-  font-size: .7em;
+  font-size: 0.7em;
 }
 .text-smaller {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 .text-small {
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .text-big {
   font-size: 1.1em;
@@ -193,9 +187,13 @@ aside .text-label {
 }
 .link svg,
 .not-a-real-link svg,
-.button-link svg {
+.button-link svg,
+.icon-badge svg {
   font-size: inherit;
   vertical-align: inherit;
+}
+.link svg,
+.button-link svg {
   margin: 0 4px 0 0;
 }
 .not-a-real-link svg {
@@ -212,20 +210,34 @@ aside .text-label {
   cursor: pointer;
 }
 
-.mutation {
+.icons-wrapper {
   bottom: 8px;
   right: 8px;
   position: absolute;
   padding-top: 12px;
 }
+.icons-wrapper > * {
+  vertical-align: sub;
+  display: inline-block;
+}
+.icons-wrapper .icon-badge {
+  padding: 2px 4px;
+  margin-left: 4px;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  background-color: #f7f7f7;
+}
+.icons-wrapper .icon-badge:hover {
+  border-color: #aaa;
+}
 
 .badge {
   margin-right: 4px;
-  font-family: 'Dosis';
+  font-family: "Dosis";
   border: none;
   background: none;
 }
-.badge.resource  {
+.badge.resource {
   color: rgba(85, 119, 34, 1);
 }
 .badge.keyword {
@@ -238,7 +250,7 @@ aside .text-label {
 }
 
 mark {
-  background-color: #AB274F;
+  background-color: #ab274f;
   color: #fff;
 }
 
@@ -253,16 +265,16 @@ button {
 /*** HACK ***/
 /* react-select - give the same style of the .badge */
 .resources-select-container .css-1rhbuit-multiValue {
-  background-color: rgba(85, 119, 34, .3);
+  background-color: rgba(85, 119, 34, 0.3);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'Dosis';
+  font-family: "Dosis";
 }
 .keywords-select-container .css-1rhbuit-multiValue {
-  background-color: rgba(221, 119, 0, .3);
+  background-color: rgba(221, 119, 0, 0.3);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'Dosis';
+  font-family: "Dosis";
 }
 .filter-box > div > div {
   border: 1px solid #666;
@@ -277,18 +289,23 @@ button {
 
 /* material tooltip - customize the style */
 .MuiTooltip-tooltip {
-  font-size: .8em!important;
-  background-color: #1b2031!important;
+  font-size: 0.8em !important;
+  background-color: #1b2031 !important;
 }
 .MuiTooltip-arrow {
-  color: #1b2031!important;
+  color: #1b2031 !important;
 }
 /*** END OF HACK ***/
 
-
 /*** RESPONSIVE RULES ***/
-@media only screen and (min-width: 1280px) {
-
+@media only screen and (max-width: 1920px) {
+  article {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  article:last-of-type {
+    margin-left: 1%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   header .filters-wrapper {
@@ -310,7 +327,7 @@ button {
 }
 @media only screen and (max-width: 768px) {
   header .filters-wrapper > * {
-    margin: .1em 0;
+    margin: 0.1em 0;
     min-width: 0;
     width: 100%;
   }
@@ -335,7 +352,7 @@ button {
   article .content {
     padding: 12px;
   }
-  article aside .mutation {
+  article aside .icons-wrapper {
     position: relative;
     bottom: auto;
     display: block;
@@ -345,10 +362,6 @@ button {
     margin-right: 0;
     margin-top: 4px;
     text-align: right;
-  }
-  article aside .mutation > * {
-    vertical-align: sub;
-    display: inline-block;
   }
   article .registry-wrapper {
     display: none;
