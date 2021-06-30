@@ -86,17 +86,12 @@ section {
   background-color: #fafafa;
 }
 article {
-  flex: 0 0 32%;
-  max-width: 32%;
+  width: 32%;
   background-color: #fff;
   border: 1px solid #c0c0c0;
   padding: 12px;
   border-radius: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-article:last-of-type {
-  margin-left: 0.66%;
+  margin: 16px 0.66%;
 }
 
 article .name {
@@ -300,11 +295,8 @@ button {
 /*** RESPONSIVE RULES ***/
 @media only screen and (max-width: 1920px) {
   article {
-    flex: 0 0 48%;
-    max-width: 48%;
-  }
-  article:last-of-type {
-    margin-left: 1%;
+    width: 48%;
+    margin: 16px 1%;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -318,11 +310,8 @@ button {
     width: 320px;
   }
   article {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  article:last-of-type {
-    margin-left: 0;
+    width: 100%;
+    margin: 16px 0;
   }
 }
 @media only screen and (max-width: 768px) {
