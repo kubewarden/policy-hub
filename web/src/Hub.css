@@ -55,6 +55,10 @@ header .filters-wrapper > * {
   vertical-align: bottom;
   font-size: 0.9em;
 }
+header .filters-wrapper .toolbar {
+  padding: 8px 4px;
+  color: #fafafa;
+}
 header .filter-box > input {
   width: 400px;
   padding: 0 8px;

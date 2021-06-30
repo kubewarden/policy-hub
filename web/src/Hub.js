@@ -101,6 +101,10 @@ class Hub extends React.Component {
       keywordsOptions = [...keywordsOptions, {value: k, label: k}];
     });
 
+    const allCounter = Object.keys(this.state.dataSet).length;
+    const filteredData = this.filter();
+    const visibleCounter = filteredData.length;
+
     return (
       <div className="Hub">
         <header className="Hub-header">
@@ -137,12 +141,14 @@ class Hub extends React.Component {
                 placeholder="Filter by keywords"
               />
             </div>
+            <div className="toolbar">
+              <b>{visibleCounter}</b> {visibleCounter > 1 ? "items" : "item"} of <b>{allCounter}</b>
+            </div>
           </div>
         </header>
         <section>
           {
-            this.filter()
-              .map(e =>
+            filteredData.map(e =>
                 <PolicyItem policy={e} key={e.name}
                   descriptionCriteria={this.state.descriptionCriteria}
                   additionalResourceFilter={(e) => this.additionalResourceFilter(e)}
