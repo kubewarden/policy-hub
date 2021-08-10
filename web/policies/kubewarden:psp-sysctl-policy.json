@@ -1,14 +1,14 @@
 {
   "name": "psp-sysctl",
-  "description": "policy to control sysctls in pods",
+  "description": "A Pod Security Policy that controls usage of sysctls in pods",
   "homepage": "https://github.com/kubewarden/psp-sysctl-policy",
   "author": {
     "name": "Kuberwarden devs",
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/psp-sysctl:v0.1.1",
-    "url": "https://github.com/kubewarden/psp-sysctl-policy/releases/download/v0.1.1/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/psp-sysctl:v0.1.2",
+    "url": "https://github.com/kubewarden/psp-sysctl-policy/releases/download/v0.1.2/policy.wasm"
   },
   "keywords": [
     "PSP",
