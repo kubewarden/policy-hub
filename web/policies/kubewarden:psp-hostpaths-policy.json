@@ -1,0 +1,23 @@
+{
+  "name": "psp-hostpaths",
+  "description": "PSP that controls usage of hostPath volumes",
+  "homepage": "https://github.com/kubewarden/psp-hostpaths-policy",
+  "author": {
+    "name": "Kuberwarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-hostpaths:v0.1.0",
+    "url": "https://github.com/kubewarden/psp-hostpaths-policy/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Hostpaths",
+    "Pod"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "context-aware": false
+}
