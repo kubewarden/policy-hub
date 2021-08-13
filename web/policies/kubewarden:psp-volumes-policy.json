@@ -1,0 +1,23 @@
+{
+  "name": "psp-volumes",
+  "description": "Pod Security Policy that controls usage of volumes",
+  "homepage": "https://github.com/kubewarden/psp-volumes-policy",
+  "author": {
+    "name": "Kuberwarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-volumes:v0.1.1",
+    "url": "https://github.com/kubewarden/psp-volumes-policy/releases/download/v0.1.1/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Volumes",
+    "Pod"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "context-aware": false
+}
