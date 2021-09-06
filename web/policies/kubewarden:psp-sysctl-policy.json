@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/psp-sysctl:v0.1.3",
-    "url": "https://github.com/kubewarden/psp-sysctl-policy/releases/download/v0.1.3/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/psp-sysctl:v0.1.4",
+    "url": "https://github.com/kubewarden/psp-sysctl-policy/releases/download/v0.1.4/policy.wasm"
   },
   "keywords": [
     "PSP",
@@ -19,5 +19,5 @@
     "Pod"
   ],
   "mutation": false,
-  "context-aware": false
+  "contextAware": false
 }
