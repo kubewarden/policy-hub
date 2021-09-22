@@ -1,0 +1,21 @@
+{
+  "name": "psp-disallow-service-loadbalancer",
+  "description": "A policy that prevents the creation of Service resources of type `LoadBalancer`",
+  "homepage": "https://github.com/kubewarden/policy-disallow-service-loadbalancer",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/disallow-service-loadbalancer:v0.1.0",
+    "url": "https://github.com/kubewarden/disallow-service-loadbalancer/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "Service"
+  ],
+  "resources": [
+    "Service"
+  ],
+  "mutation": false,
+  "contextAware": false
+}
