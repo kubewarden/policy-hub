@@ -1,0 +1,23 @@
+{
+  "name": "psp-allowed-proc-mount-types",
+  "description": null,
+  "homepage": "https://github.com/kubewarden/psp-allowed-proc-mount-types",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-allowed-proc-mount-types:v0.0.1",
+    "url": "https://github.com/kubewarden/psp-allowed-proc-mount-types/releases/download/v0.0.1/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "Runtime"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "contextAware": false
+}
