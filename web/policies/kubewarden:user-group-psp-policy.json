@@ -1,0 +1,24 @@
+{
+  "name": "psp-user-group",
+  "description": "A Pod Security Policy that controls the container user and groups",
+  "homepage": "https://github.com/kubewarden/user-group-psp-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-user-group:v0.1.2",
+    "url": "https://github.com/kubewarden/user-group-psp-policy/releases/download/v0.1.2/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "User",
+    "Group"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": true,
+  "contextAware": false
+}
