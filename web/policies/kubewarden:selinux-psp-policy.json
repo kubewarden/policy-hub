@@ -1,0 +1,24 @@
+{
+  "name": "psp-selinux",
+  "description": "Replacement for the Kubernetes Pod Security Policy that controls the usage of SELinux",
+  "homepage": "https://github.com/kubewarden/selinux-psp-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-selinux:v0.1.0",
+    "url": "https://github.com/kubewarden/selinux-psp-policy/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "Runtime",
+    "SELinux"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": true,
+  "contextAware": false
+}
