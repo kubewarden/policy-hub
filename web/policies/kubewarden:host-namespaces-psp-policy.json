@@ -1,0 +1,23 @@
+{
+  "name": "psp-host-namespaces",
+  "description": "A Pod Security Policy that controls the usage of host namespaces",
+  "homepage": "https://github.com/kubewarden/host-namespaces-psp-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-host-namespaces:v0.1.0",
+    "url": "https://github.com/kubewarden/host-namespaces-psp-policy/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "Network"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "contextAware": false
+}
