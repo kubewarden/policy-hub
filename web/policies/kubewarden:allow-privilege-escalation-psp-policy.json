@@ -1,0 +1,23 @@
+{
+  "name": "psp-allow-privilege-escalation",
+  "description": "A Pod Security Policy that controls usage of `allowPrivilegeEscalation`",
+  "homepage": "https://github.com/kubewarden/allow-privilege-escalation-psp-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-allow-privilege-escalation:v0.1.8",
+    "url": "https://github.com/kubewarden/allow-privilege-escalation-psp-policy/releases/download/v0.1.8/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "Privilege Escalation"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "contextAware": false
+}
