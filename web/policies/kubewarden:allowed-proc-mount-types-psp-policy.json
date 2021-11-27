@@ -1,0 +1,23 @@
+{
+  "name": "psp-allowed-proc-mount-types",
+  "description": "Replacement for the Kubernetes Pod Security Policy that controls he usage of /proc mount types",
+  "homepage": "https://github.com/kubewarden/allowed-proc-mount-types-psp-policy",
+  "author": {
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/psp-allowed-proc-mount-types:v0.1.0",
+    "url": "https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "Runtime"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "contextAware": false
+}
