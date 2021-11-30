@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/psp-allow-privilege-escalation:v0.1.8",
-    "url": "https://github.com/kubewarden/allow-privilege-escalation-psp-policy/releases/download/v0.1.8/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/psp-allow-privilege-escalation:v0.1.9",
+    "url": "https://github.com/kubewarden/allow-privilege-escalation-psp-policy/releases/download/v0.1.9/policy.wasm"
   },
   "keywords": [
     "PSP",
@@ -18,6 +18,6 @@
   "resources": [
     "Pod"
   ],
-  "mutation": false,
+  "mutation": true,
   "contextAware": false
 }
