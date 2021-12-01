@@ -1,14 +1,14 @@
 {
   "name": "readonly-root-filesystem-psp-policy",
-  "description": "DESCRIPTION OF YOUR POLICY",
-  "homepage": "POLICY HOMEPAGE URL",
+  "description": "A Kubewarden policy that enforces root filesystem to be readonly",
+  "homepage": "https://github.com/kubewarden/readonly-root-filesystem-psp-policy",
   "author": {
-    "name": "Flavio Castelli <fcastelli@suse.com>",
-    "homepage": "https://author1.website"
+    "name": "Kubewarden devs",
+    "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/readonly-root-filesystem-psp-policy:v0.1.0",
-    "url": "https://github.com/kubewarden/readonly-root-filesystem-psp-policy/releases/download/v0.1.0/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/readonly-root-filesystem-psp-policy:v0.1.1",
+    "url": "https://github.com/kubewarden/readonly-root-filesystem-psp-policy/releases/download/v0.1.1/policy.wasm"
   },
   "keywords": [
     "PSP",
