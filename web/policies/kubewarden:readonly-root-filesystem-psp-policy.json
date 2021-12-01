@@ -1,0 +1,24 @@
+{
+  "name": "readonly-root-filesystem-psp-policy",
+  "description": "DESCRIPTION OF YOUR POLICY",
+  "homepage": "POLICY HOMEPAGE URL",
+  "author": {
+    "name": "Flavio Castelli <fcastelli@suse.com>",
+    "homepage": "https://author1.website"
+  },
+  "download": {
+    "registry": "ghcr.io/kubewarden/policies/readonly-root-filesystem-psp-policy:v0.1.0",
+    "url": "https://github.com/kubewarden/readonly-root-filesystem-psp-policy/releases/download/v0.1.0/policy.wasm"
+  },
+  "keywords": [
+    "PSP",
+    "Container",
+    "filesystem",
+    "Volume"
+  ],
+  "resources": [
+    "Pod"
+  ],
+  "mutation": false,
+  "contextAware": false
+}
