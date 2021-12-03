@@ -1,5 +1,5 @@
 {
-  "name": "psp-flexvolume-drivers",
+  "name": "flexvolume-drivers-psp",
   "description": "Replacement for the Kubernetes Pod Security Policy that controls the allowed `flexVolume` drivers",
   "homepage": "https://github.com/kubewarden/flexvolume-drivers-psp-policy",
   "author": {
@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/psp-flexvolume-drivers:v0.1.0",
-    "url": "https://github.com/kubwarden/flexvolume-drivers-psp-policy/releases/download/v0.1.0/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/flexvolume-drivers-psp:v0.1.1",
+    "url": "https://github.com/kubwarden/flexvolume-drivers-psp-policy/releases/download/v0.1.1/policy.wasm"
   },
   "keywords": [
     "PSP",
