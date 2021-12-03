@@ -1,5 +1,5 @@
 {
-  "name": "psp-capabilities",
+  "name": "capabilities-psp",
   "description": "A Pod Security Policy that controls Container Capabilities",
   "homepage": "https://github.com/kubewarden/capabilities-psp-policy",
   "author": {
@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/psp-capabilities:v0.1.7",
-    "url": "https://github.com/kubewarden/capabilities-psp-policy/releases/download/v0.1.7/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/capabilities-psp:v0.1.8",
+    "url": "https://github.com/kubewarden/capabilities-psp-policy/releases/download/v0.1.8/policy.wasm"
   },
   "keywords": [
     "PSP",
