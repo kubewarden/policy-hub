@@ -36,13 +36,13 @@ class Hub extends React.Component {
   getDistinctSetOfResources() {
     let arrayWithDuplicateResources = [];
     this.state.dataSet.forEach(p => arrayWithDuplicateResources = arrayWithDuplicateResources.concat(...p.resources));
-    return Array.from(new Set(arrayWithDuplicateResources));
+    return Array.from(new Set(arrayWithDuplicateResources)).sort((a,b) => a.toLowerCase() > b.toLowerCase());
   }
 
   getDistinctSetOfKeywords() {
     let arrayWithDuplicateKeywords = [];
     this.state.dataSet.forEach(p => arrayWithDuplicateKeywords = arrayWithDuplicateKeywords.concat(...p.keywords));
-    return Array.from(new Set(arrayWithDuplicateKeywords));
+    return Array.from(new Set(arrayWithDuplicateKeywords)).sort((a,b) => a.toLowerCase() > b.toLowerCase());
   }
 
   additionalResourceFilter(e) {
