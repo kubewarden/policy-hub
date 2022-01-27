@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/safe-annotations:v0.1.0",
-    "url": "https://github.com/kubewarden/safe-annotations-policy/releases/download/v0.1.0/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/safe-annotations:v0.1.1",
+    "url": "https://github.com/kubewarden/safe-annotations-policy/releases/download/v0.1.1/policy.wasm"
   },
   "keywords": [
     "Annotations"
