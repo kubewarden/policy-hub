@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/capabilities-psp:v0.1.8",
-    "url": "https://github.com/kubewarden/capabilities-psp-policy/releases/download/v0.1.8/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/capabilities-psp:v0.1.9",
+    "url": "https://github.com/kubewarden/capabilities-psp-policy/releases/download/v0.1.9/policy.wasm"
   },
   "keywords": [
     "PSP",
