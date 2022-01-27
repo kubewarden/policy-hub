@@ -7,8 +7,8 @@
     "homepage": "https://github.com/kubewarden"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/volumes-psp:v0.1.4",
-    "url": "https://github.com/kubewarden/volumes-psp-policy/releases/download/v0.1.4/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/volumes-psp:v0.1.6",
+    "url": "https://github.com/kubewarden/volumes-psp-policy/releases/download/v0.1.6/policy.wasm"
   },
   "keywords": [
     "PSP",
