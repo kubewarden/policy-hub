@@ -60,7 +60,7 @@ jobs:
 
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           commit-message: 'Update policy ${{ github.event.inputs.repository}} to release ${{ github.event.inputs.tag }}'
           branch: 'update-${{ github.event.inputs.repository }}'
