@@ -9,6 +9,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import MaterialTooltip from "@material-ui/core/Tooltip";
 import SyncIcon from '@material-ui/icons/Sync';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import { green } from '@material-ui/core/colors';
 
 type Author = {
   name: String,
@@ -30,6 +32,7 @@ export type Policy = {
   resources: Array<String>,
   mutation: Boolean,
   contextAware: Boolean,
+  signed: Boolean,
 }
 
 type Props = {
@@ -105,7 +108,7 @@ const PolicyItem = (props: Props) => {
               </a>
             : null
           }
-        </div> 
+        </div>
         <aside>
           <div>
             <span className="text-light text-tiny text-label">RESOURCES</span>
@@ -147,6 +150,13 @@ const PolicyItem = (props: Props) => {
               policy.contextAware ?
                 <MaterialTooltip arrow title="Context Aware">
                   <div className="icon-badge"><SyncIcon color="primary" /></div>
+                </MaterialTooltip>
+                : null
+            }
+            {
+              policy.signed ?
+                <MaterialTooltip arrow title="Signed policy">
+                  <div className="icon-badge"><CheckCircleOutlineIcon style={{ color: green[500] }} /></div>
                 </MaterialTooltip>
                 : null
             }
