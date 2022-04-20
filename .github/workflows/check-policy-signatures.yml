@@ -1,0 +1,26 @@
+# This action is ran  daily or manually.
+#
+# The action iterate over all the policies defined in web/policies and checks
+# if they are still signed by a trusted entity defined in the file .github/signature_verification_config.yaml.
+# If some policy is not trusted, the action fails.
+
+name: Policies signatures verification
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  check-signatures:
+    name: Check policies signatures
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Install kwctl
+        uses: kubewarden/github-actions/kwctl-installer@v1
+
+      - name: Check policies signatures
+        run: scripts/verify-policies-signatures.sh

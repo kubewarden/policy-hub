@@ -6,7 +6,6 @@
 #
 # The action downloads the `hub.yml` file from the repository mentioned
 # by the input variables.
-#
 # The action then replaces the special `__TAG__` string inside of the
 # `hub.json` file with the value of the `tag` it received at invocation
 # time.
@@ -36,6 +35,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
+      - name: install kwctl
+        uses: kubewarden/github-actions/kwctl-installer@v1
+
       - name: Check presence of hub metadata inside of remote repo
         run: |
           HTTP_CODE=$(curl --head -s -o /dev/null -w "%{http_code}" \
@@ -47,12 +49,17 @@ jobs:
           curl -L https://github.com/mikefarah/yq/releases/download/v4.7.0/yq_linux_amd64 -o yq
           chmod 755 yq
 
-      - name: fetch policy definition
+      - name: fetch policy definition and check if it's trusted
         run: |
           export OUTPUT=$(echo ${{ github.event.inputs.repository }} | sed -e "s|/|:|")
           curl https://raw.githubusercontent.com/${{ github.event.inputs.repository }}/${{ github.event.inputs.tag }}/hub.yml | \
             sed -e "s|__TAG__|${{ github.event.inputs.tag }}|g" | \
-            ./yq eval -j > web/policies/${OUTPUT}.json
+            ./yq eval -j > web/policies/${OUTPUT}.json && \
+            REGISTRY=$(jq -r ".download.registry" web/policies/${OUTPUT}.json) && \
+            kwctl verify --verification-config-path .github/signature_verification_config.yaml  ${REGISTRY} && \
+            jq ".signed |= true" web/policies/${OUTPUT}.json > /tmp/policy.json && \
+            mv /tmp/policy.json web/policies/${OUTPUT}.json && \
+            jq "" web/policies/${OUTPUT}.json
 
       # This is needed otherwise the PR will include the yq binary too
       - name: remove yq
