@@ -9,7 +9,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import MaterialTooltip from "@material-ui/core/Tooltip";
 import SyncIcon from '@material-ui/icons/Sync';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import { green } from '@material-ui/core/colors';
 
 type Author = {
@@ -156,7 +156,7 @@ const PolicyItem = (props: Props) => {
             {
               policy.signed ?
                 <MaterialTooltip arrow title="Signed policy">
-                  <div className="icon-badge"><CheckCircleOutlineIcon style={{ color: green[500] }} /></div>
+                  <div className="icon-badge"><VerifiedUserIcon style={{ color: green[500] }} /></div>
                 </MaterialTooltip>
                 : null
             }
