@@ -11,6 +11,11 @@ import MaterialTooltip from "@material-ui/core/Tooltip";
 import SyncIcon from '@material-ui/icons/Sync';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import { green } from '@material-ui/core/colors';
+import { makeStyles } from '@material-ui/core/styles';
+
+const signedPolicyStyle = makeStyles({
+  root: { color: green[500] }
+});
 
 type Author = {
   name: String,
@@ -51,6 +56,7 @@ const PolicyItem = (props: Props) => {
   };
 
   const policy = props.policy;
+  const classes = signedPolicyStyle();
 
   return (
     <article>
@@ -156,7 +162,7 @@ const PolicyItem = (props: Props) => {
             {
               policy.signed ?
                 <MaterialTooltip arrow title="Signed policy">
-                  <div className="icon-badge"><VerifiedUserIcon style={{ color: green[500] }} /></div>
+                  <div className="icon-badge"><VerifiedUserIcon classes={{root: classes.root}}/></div>
                 </MaterialTooltip>
                 : null
             }
