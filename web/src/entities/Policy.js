@@ -9,6 +9,13 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import MaterialTooltip from "@material-ui/core/Tooltip";
 import SyncIcon from '@material-ui/icons/Sync';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import { green } from '@material-ui/core/colors';
+import { makeStyles } from '@material-ui/core/styles';
+
+const signedPolicyStyle = makeStyles({
+  root: { color: green[500] }
+});
 
 type Author = {
   name: String,
@@ -30,6 +37,7 @@ export type Policy = {
   resources: Array<String>,
   mutation: Boolean,
   contextAware: Boolean,
+  signed: Boolean,
 }
 
 type Props = {
@@ -48,6 +56,7 @@ const PolicyItem = (props: Props) => {
   };
 
   const policy = props.policy;
+  const classes = signedPolicyStyle();
 
   return (
     <article>
@@ -105,7 +114,7 @@ const PolicyItem = (props: Props) => {
               </a>
             : null
           }
-        </div> 
+        </div>
         <aside>
           <div>
             <span className="text-light text-tiny text-label">RESOURCES</span>
@@ -147,6 +156,13 @@ const PolicyItem = (props: Props) => {
               policy.contextAware ?
                 <MaterialTooltip arrow title="Context Aware">
                   <div className="icon-badge"><SyncIcon color="primary" /></div>
+                </MaterialTooltip>
+                : null
+            }
+            {
+              policy.signed ?
+                <MaterialTooltip arrow title="Signed policy">
+                  <div className="icon-badge"><VerifiedUserIcon classes={{root: classes.root}}/></div>
                 </MaterialTooltip>
                 : null
             }
