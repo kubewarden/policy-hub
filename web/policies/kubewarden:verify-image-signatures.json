@@ -7,8 +7,8 @@
     "homepage": "https://author1.website"
   },
   "download": {
-    "registry": "ghcr.io/kubewarden/policies/verify-image-signatures:v0.0.1",
-    "url": "https://github.com/yourorg/verify-image-signatures/releases/download/v0.0.1/policy.wasm"
+    "registry": "ghcr.io/kubewarden/policies/verify-image-signatures:v0.1.1",
+    "url": "https://github.com/yourorg/verify-image-signatures/releases/download/v0.1.1/policy.wasm"
   },
   "keywords": [
     "this is freeform"
