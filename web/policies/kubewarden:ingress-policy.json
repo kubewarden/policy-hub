@@ -17,5 +17,6 @@
     "Ingress"
   ],
   "mutation": false,
-  "contextAware": false
+  "contextAware": false,
+  "signed": true
 }

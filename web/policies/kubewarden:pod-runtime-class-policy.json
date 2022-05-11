@@ -19,5 +19,6 @@
     "Pod"
   ],
   "mutation": true,
-  "contextAware": false
+  "contextAware": false,
+  "signed": true
 }
