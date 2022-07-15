@@ -1,5 +1,6 @@
 import './Hub.css';
 import * as React from 'react';
+import Banner from './entities/Banner/Banner';
 import PolicyItem from './entities/Policy';
 import Select from 'react-select';
 import DataSet from './data/policy-hub.json';
@@ -108,6 +109,7 @@ class Hub extends React.Component {
     return (
       <div className="Hub">
         <header className="Hub-header">
+          <Banner />
           <div className="header-links">
             <a href="/" className="header-homepage" rel="noopener noreferrer">
               <img src={LogoNoText} alt="Kubewarden Policy Hub Logo" /> POLICY HUB
