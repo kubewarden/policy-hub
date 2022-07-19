@@ -20,5 +20,5 @@
   ],
   "mutation": false,
   "contextAware": false,
-  "signed": true
+  "signed": false
 }
