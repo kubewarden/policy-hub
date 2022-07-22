@@ -14,8 +14,7 @@ class Banner extends React.Component {
           <span>
             All of our policies can now be found on the&nbsp;
             <a
-              // TODO: update href once policies are in place
-              href="https://staging.artifacthub.io/packages/search?kind=13&sort=relevance&page=1" 
+              href="https://artifacthub.io/packages/search?kind=13&sort=relevance&page=1" 
               target="_blank"
               rel="noreferrer nofollow"
             >
@@ -23,15 +22,14 @@ class Banner extends React.Component {
             </a>
             .
           </span>
-          
+
           <br />
 
           <span>
             <strong>
               Read about our migration&nbsp;
               <a
-                // TODO: update href to blog post
-                href="https://www.kubewarden.io/blog/"
+                href="https://www.kubewarden.io/blog/2022/07/artifact-hub-supports-kubewarden/"
                 target="_blank"
                 rel="noreferrer"
               >
