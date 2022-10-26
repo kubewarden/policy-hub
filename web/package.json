@@ -6,7 +6,7 @@
     "@emotion/styled": "^11.9.3",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.2",
-    "@material/tooltip": "^10.0.0",
+    "@material/tooltip": "^14.0.0",
     "@mui/material": "^5.9.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.7",
